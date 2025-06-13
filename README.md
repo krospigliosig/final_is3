@@ -27,13 +27,27 @@ acá va la descripción del problema yo hice la justificación y no sé por qué
 
 ## Objetivos
 
-acá van los objetivos
+### Objetivo general
+Diseñar e implementar una aplicación web para gestionar el inventario de artículos deportivos, permitiendo su alquiler por parte de los usuarios y brindando al administrador control total del sistema.
+
+### Objetivos específicos
+- Permitir a los usuarios visualizar y reservar artículos deportivos disponibles.
+- Implementar una interfaz de administración para agregar, editar y eliminar artículos del inventario.
+- Habilitar restricciones para usuarios que incumplen las normas.
+- Mejorar el control, trazabilidad y disponibilidad de los recursos deportivos y recreativos.
 
 ---
 
 ## Alcance del sistema
 
-acá va el alcance del sistemab (si alguien sabe qué es lo llena porfa)
+El sistema contempla las siguientes funcionalidades:
+
+- Registro de usuarios.
+- Alquiler y reserva de artículos deportivos.
+- Administración del inventario.
+- Visualización en tiempo real del estado de disponibilidad de los artículos.
+- Gestión de usuarios: bloqueo, permisos y monitoreo de uso.
+- Registro y consulta del historial de movimientos (alquileres, devoluciones, sanciones).
 
 ---
 
@@ -58,6 +72,4 @@ Así, este proyecto brinda una alternativa de solución a través de un sistema 
 
 ## Metodología de trabajo
 
-Metodología ágil de desarrollo
-
-Scrum
+Se utilizará la metodología ágil Scrum, que permite desarrollar el proyecto por iteraciones (sprints), con entregables funcionales al final de cada ciclo. Esto facilita el seguimiento del avance y permite incorporar mejoras o cambios de manera continua según el feedback del cliente o los usuarios.
