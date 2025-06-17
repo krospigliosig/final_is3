@@ -17,11 +17,11 @@ Este repositorio contiene la implementación de un sistema de inventario diseña
 
 ## Descripción del problema
 
-acá va la descripción del problema yo hice la justificación y no sé por qué camino llevar esto pero se trata de:
-- contextualizar
-- las soluciones actuales y por qué no sirven
-- qué puede mejorarse
-- consecuencias del problema
+En muchas instituciones educativas, la gestión del inventario de artículos deportivos y recreativos suele realizarse de forma manual o con herramientas improvisadas como hojas de cálculo o cuadernos físicos. Esto genera confusión, pérdida de artículos, reservas mal registradas y una falta general de control sobre el uso y estado de los bienes disponibles. Además, no existen mecanismos automáticos para sancionar a los usuarios que incumplen las normas o para rastrear el historial de uso de los artículos.
+
+Actualmente, estas soluciones resultan insuficientes ante la necesidad de una gestión eficiente, segura y transparente de los recursos compartidos. La falta de digitalización dificulta el seguimiento en tiempo real de la disponibilidad, el estado y la ubicación de los artículos, lo cual puede derivar en conflictos entre usuarios, pérdidas económicas para la institución y una experiencia insatisfactoria para quienes desean acceder a estos recursos.
+
+Por tanto, es necesario desarrollar un sistema que centralice, automatice y modernice la administración del inventario, permitiendo un control riguroso y una interacción más fluida entre los usuarios y los responsables del inventario. De esta manera, se busca mejorar el acceso, la trazabilidad y el respeto por los bienes comunes, promoviendo una mejor convivencia en la comunidad educativa.
 
 ---
 
