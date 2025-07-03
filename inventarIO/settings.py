@@ -91,8 +91,6 @@ DATABASES = {
     }
 }
 
-print("DB_NAME:", os.getenv('DB_NAME'))
-
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
@@ -115,9 +113,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "es-pe"
 
-TIME_ZONE = "-05"
+TIME_ZONE = "America/Lima"
 
 USE_I18N = True
 

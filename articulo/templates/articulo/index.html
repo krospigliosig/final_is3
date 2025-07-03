@@ -1,0 +1,92 @@
+<!-- ARCHIVO DE PRUEBA
+ELIMINAR ANTES DE DESPLIEGUE -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Artículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef1f5;
+            padding: 2em;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .tabla-articulos {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .tabla-articulos th,
+        .tabla-articulos td {
+            padding: 0.75em 1em;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .tabla-articulos th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .estado-disponible { color: green; }
+        .estado-no-disponible { color: orange; }
+        .estado-danado { color: red; }
+
+        .sin-articulos {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <h1>Listado de Artículos</h1>
+
+    {% if articulos %}
+        <table class="tabla-articulos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Estado</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for articulo in articulos %}
+                    <tr>
+                        <td>{{ articulo.id }}</td>
+                        <td>{{ articulo.nombre }}</td>
+                        <td>{{ articulo.categoria }}</td>
+                        <td class="estado-{{ articulo.estado|lower|slugify }}">{{ articulo.estado }}</td>
+                        <td>{{ articulo.descripcion }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="sin-articulos">No hay artículos registrados en la base de datos.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
+
