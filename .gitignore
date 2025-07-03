@@ -197,5 +197,7 @@ cython_debug/
 .cursorindexingignore
 
 # Documentación
-diagrama_er.png
-diagrama_er.xml
+docs/*
+
+# Herramientas de DB
+sqlite-tools-win-x64-3500200/*

@@ -1,0 +1,6 @@
+pytest
+pytest-cov
+coverage
+Django
+sqlite3
+weasyprint
