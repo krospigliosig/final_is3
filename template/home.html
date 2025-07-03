@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InventarIO - Artículos Deportivos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rajdhani', sans-serif;
+      background-color: #001123;
+      color: #374452;
+    }
+
+    .header-container {
+      background-color: #000D1B;
+      padding: 15px 30px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000A17;
+      border-radius: 20px;
+      padding: 15px 25px;
+      margin: 0 auto;
+      max-width: calc(100% - 60px);
+    }
+
+    .logo {
+      color: #66fcf1;
+      font-size: 24px;
+      margin-right: 30px;
+    }
+
+    .nav-section {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .nav-categorias {
+      display: flex;
+    }
+
+    .nav-categorias a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #c5c6c7;
+      font-weight: normal;
+      transition: all 0.2s;
+    }
+
+    .nav-categorias a:hover {
+      font-weight: bold;
+      text-decoration: underline;
+      color: #ffffff;
+    }
+
+    .user-section {
+      display: flex;
+      align-items: center;
+      background-color: #001123;
+      border-radius: 15px;
+      padding: 8px 15px;
+      margin-left: 20px;
+    }
+
+    .usuario-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .user-text {
+      display: flex;
+      flex-direction: column;
+      color: #c5c6c7;
+    }
+
+    .user-name {
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .activo {
+      color: #37e634;
+      font-size: 12px;
+    }
+
+    .user-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .user-icons i {
+      font-size: 18px;
+      color: #66fcf1;
+      cursor: pointer;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      position: relative;
+    }
+
+    .card {
+      width: 300px;
+      height: 357px;
+      background-color: #000A17;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+      cursor: pointer;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 244px;
+      height: 182px;
+      object-fit: cover;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      color: #66fcf1;
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+
+    .card-content {
+      padding: 0 20px;
+      text-align: left;
+      font-size: 11px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .info-line {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .info-icon {
+      margin-right: 8px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .disponibilidad {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .estado {
+      color: #2ecc71;
+    }
+
+    .ribbon {
+      position: absolute;
+      background-color: #66fcf1;
+      color: #0b0c10;
+      padding: 5px ;
+      font-weight: bold;
+      transform: rotate(-30deg);
+      left: -50px;
+      width: 200px;
+      text-align: center;
+    }
+
+    /* Estilos para la nueva sección blanca */
+    .new-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #0D1C31;
+    border-radius: 14px;
+    width: 1333px;
+    height: 309px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    }
+
+    .new-container {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto; /* Para scroll horizontal si no caben */
+    }
+
+    .small-cards-container {
+    display: flex;
+    gap: 15px;
+    height: 100%;
+    }
+
+    .small-card {
+    width: 220px;
+    height: 260px;
+    background-color: #000A17;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    flex-shrink: 0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    }
+    .small-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .small-card img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 8px;
+    }
+
+    .small-card h4 {
+    color: #66FCF1;
+    margin: 8px 0;
+    font-size: 16px;
+    }
+
+    .small-card-content {
+    padding: 0 15px;
+    text-align: left;
+    font-size: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    <header>
+      <div class="nav-section">
+        <div class="logo">inventarIO</div>
+        <nav class="nav-categorias">
+          <a href="#">Todos</a>
+          <a href="#">Fútbol</a>
+          <a href="#">Vóley</a>
+          <a href="#">Básquet</a>
+          <a href="#">Natación</a>
+          <a href="#">Más artículos</a>
+        </nav>
+      </div>
+      
+      <div class="user-section">
+        <div class="usuario-info">
+          <div class="user-text">
+            <div class="user-name">Diego Aquino</div>
+            <div class="activo">● Activo</div>
+          </div>
+          <div class="user-icons">
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <!-- Nueva sección rectangular blanca -->
+<div class="new-section">
+  <div class="new-container">
+    <div class="ribbon">Nuevos Artículos</div>
+    <div class="small-cards-container">
+      <div class="small-card">
+        <a href="descripcion.html" class="small-card">
+           <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+            <h4>Pelota de fútbol</h4>
+            <div class="small-card-content">
+            <div class="info-line">
+                <span class="info-icon">🏷️</span>
+                <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">🔄</span>
+                <span>Estado: Buen estado</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">📍</span>
+                <span>Lugar: cancha mecánica</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">⏱</span>
+                <span>Tiempo máximo: 3 días</span>
+            </div>
+            </div>
+        </a>
+      </div>
+
+      <div class="small-card">
+         <a href="descripcion.html" class="small-card">
+           <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+            <h4>Pelota de fútbol</h4>
+            <div class="small-card-content">
+            <div class="info-line">
+                <span class="info-icon">🏷️</span>
+                <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">🔄</span>
+                <span>Estado: Buen estado</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">📍</span>
+                <span>Lugar: cancha mecánica</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">⏱</span>
+                <span>Tiempo máximo: 3 días</span>
+            </div>
+            </div>
+        </a>
+      </div>
+
+      <div class="small-card">
+        <a href="descripcion.html" class="small-card">
+           <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+            <h4>Pelota de fútbol</h4>
+            <div class="small-card-content">
+            <div class="info-line">
+                <span class="info-icon">🏷️</span>
+                <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">🔄</span>
+                <span>Estado: Buen estado</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">📍</span>
+                <span>Lugar: cancha mecánica</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">⏱</span>
+                <span>Tiempo máximo: 3 días</span>
+            </div>
+            </div>
+        </a>
+      </div>
+
+      <div class="small-card">
+        <a href="descripcion.html" class="small-card">
+           <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+            <h4>Pelota de fútbol</h4>
+            <div class="small-card-content">
+            <div class="info-line">
+                <span class="info-icon">🏷️</span>
+                <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">🔄</span>
+                <span>Estado: Buen estado</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">📍</span>
+                <span>Lugar: cancha mecánica</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">⏱</span>
+                <span>Tiempo máximo: 3 días</span>
+            </div>
+            </div>
+        </a>
+      </div>
+
+      <div class="small-card">
+        <a href="descripcion.html" class="small-card">
+           <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+            <h4>Pelota de fútbol</h4>
+            <div class="small-card-content">
+            <div class="info-line">
+                <span class="info-icon">🏷️</span>
+                <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">🔄</span>
+                <span>Estado: Buen estado</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">📍</span>
+                <span>Lugar: cancha mecánica</span>
+            </div>
+            <div class="info-line">
+                <span class="info-icon">⏱</span>
+                <span>Tiempo máximo: 3 días</span>
+            </div>
+            </div>
+        </a>
+      </div>
+      <!-- Repite este bloque 4 veces más para las 5 tarjetas -->
+    </div>
+  </div>
+</div>
+  <div class="cards-container">
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+    <a href="descripcion.html" class="card">
+      <img src="/template/image/futbol.jpg" alt="Pelota de fútbol">
+      <h3>Pelota de fútbol</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: Fútbol</span> <span class="disponibilidad">No Disponible</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: <span>Buen estado</span></span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: cancha mecánica</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: 3 días</span>
+        </div>
+      </div>
+    </a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+</body>
+</html>
