@@ -298,22 +298,19 @@
     document.addEventListener('DOMContentLoaded', function() {
       const profileIcon = document.getElementById('profile-icon');
       const dropdownContent = document.querySelector('.dropdown-content');
-      
-      // Evitar que el click en el icono se propague al documento
+
       profileIcon.addEventListener('click', function(e) {
         e.stopPropagation();
         e.preventDefault();
         dropdownContent.classList.toggle('show-dropdown');
       });
       
-      // Cerrar dropdown al hacer click fuera
       document.addEventListener('click', function(e) {
         if (!dropdownContent.contains(e.target) && e.target !== profileIcon) {
           dropdownContent.classList.remove('show-dropdown');
         }
       });
-      
-      // Evitar que el dropdown se cierre al hacer click dentro de él
+    
       dropdownContent.addEventListener('click', function(e) {
         e.stopPropagation();
       });

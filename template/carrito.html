@@ -153,6 +153,92 @@
     .show-dropdown {
       display: block !important;
     }
+    .tabla-container {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 1200px; 
+      overflow-x: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .tabla-header {
+      width: 80%; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .titulo-carrito {
+      color: #66fcf1;
+      font-size: 28px;
+      align-items: left;
+      margin: 0;
+    }
+    .tabla-articulos {
+      width: 80%; 
+      border-collapse: collapse;
+      margin: 20px 0; 
+      color: white;
+    }
+    .tabla-articulos th {
+      background-color: #000A17;
+      color: #ffffff;
+      padding: 15px;
+      text-align: left;
+      font-size: 16px;
+    }
+    .tabla-articulos td {
+      padding: 10px 15px;
+    }
+    .fila-negra {
+      background-color: #0D1C31;
+    }
+    .fila-blanca {
+      background-color: #000D1B;
+    }
+    .btn-eliminar {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .btn-eliminar:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    
+    .tabla-footer {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
+    .btn-reservar-tabla {
+      background-color: #C061FF;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+
+    .btn-reservar-tabla:hover {
+      background-color: #961de7;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
@@ -192,7 +278,88 @@
       </div>
     </header>
   </div>
-  
+
+  <div class="tabla-container">
+    <div class="tabla-header">
+      <h2 class="titulo-carrito">MI CARRITO</h2>
+    </div>
+    <table class="tabla-articulos">
+      <thead>
+        <tr>
+          <th>ID de Artículo</th>
+          <th>Nombre de Artículo</th>
+          <th>Categoría</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="fila-negra">
+          <td>001</td>
+          <td>Pelota de futbol</td>
+          <td>futbol</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-blanca">
+          <td>002</td>
+          <td>Pelota de basquet</td>
+          <td>basquet</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-negra">
+          <td>003</td>
+          <td>Pelota de voley</td>
+          <td>voley</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-blanca">
+          <td>004</td>
+          <td>Pesas 4k</td>
+          <td>otros</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-negra">
+          <td>005</td>
+          <td>boya</td>
+          <td>natacion</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-blanca">
+          <td>006</td>
+          <td>bicicleta</td>
+          <td>ciclismo</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-negra">
+          <td>007</td>
+          <td>soga</td>
+          <td>otros</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-blanca">
+          <td>008</td>
+          <td>Kit de tenis</td>
+          <td>tenis</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-negra">
+          <td>009</td>
+          <td>malla de voley</td>
+          <td>voley</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+        <tr class="fila-blanca">
+          <td>010</td>
+          <td>caja de pelotas</td>
+          <td>ping pong</td>
+          <td><button class="btn-eliminar">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="tabla-footer">
+      <button class="btn-reservar-tabla">Reservar articulos</button>
+    </div>
+  </div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const profileIcon = document.getElementById('profile-icon');
