@@ -5,3 +5,4 @@ Django
 weasyprint
 mysqlclient
 python-decouple
+django-ratelimit

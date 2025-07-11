@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "articulo.apps.ArticuloConfig",
     "usuario.apps.UsuarioConfig",
     "administrador.apps.AdministradorConfig",
+    "accion.apps.AccionConfig",
 
     # Predeterminados de Django
     "django.contrib.admin",
@@ -45,6 +46,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    # Extras
+    "ratelimit"
 ]
 
 MIDDLEWARE = [
