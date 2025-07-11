@@ -14,6 +14,8 @@ import os
 from decouple import config
 from pathlib import Path
 
+# TODO: Redis queda pendiente de instalación para django-ratelimit (seguridad multi-thread)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -48,7 +50,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     # Extras
-    "ratelimit"
+    # "django_ratelimit"
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,4 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+

@@ -1,12 +1,12 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 from articulo.models import Articulo
-from usuario.models import Usuario
 
 # Create your models here.
 class Accion(models.Model):
     fecha_inicio = models.DateTimeField("Fecha de registro", auto_now_add=True)
-    id_usuario = models.ForeignKey(Usuario, on_delete=models.PROTECT)
+    id_usuario = models.ForeignKey(User, on_delete=models.PROTECT)
 
     class Meta:
         abstract = False

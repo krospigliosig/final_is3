@@ -15,6 +15,11 @@ class RegistroUsuarioForm(forms.ModelForm):
         widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}),
         required=True
     )
+    password2 = forms.CharField(
+        label="Confirmar contraseña",
+        widget=forms.PasswordInput(attrs={'placeholder': 'Confirmar contraseña'}),
+        required=True
+    )
 
     class Meta:
         model = User
@@ -27,3 +32,11 @@ class RegistroUsuarioForm(forms.ModelForm):
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError('Ya existe un usuario con ese correo.')
         return email
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data.get("password")
+        password2 = cleaned_data.get("password2")
+
+        if password and password2 and password != password2:
+            self.add_error("password2", "Las contraseñas no coinciden.")

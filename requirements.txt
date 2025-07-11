@@ -6,3 +6,5 @@ weasyprint
 mysqlclient
 python-decouple
 django-ratelimit
+
+# redis queda pendiente de instalación

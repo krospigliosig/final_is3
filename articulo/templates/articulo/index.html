@@ -1,58 +1,15 @@
 <!-- ARCHIVO DE PRUEBA
 ELIMINAR ANTES DE DESPLIEGUE -->
 
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Listado de Artículos</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #eef1f5;
-            padding: 2em;
-        }
 
-        .contenedor {
-            max-width: 900px;
-            margin: auto;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 2em;
-        }
-
-        .tabla-articulos {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .tabla-articulos th,
-        .tabla-articulos td {
-            padding: 0.75em 1em;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-
-        .tabla-articulos th {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .estado-disponible { color: green; }
-        .estado-no-disponible { color: orange; }
-        .estado-danado { color: red; }
-
-        .sin-articulos {
-            text-align: center;
-            color: #666;
-            font-style: italic;
-            margin-top: 2em;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'articulo/style.css' %}">
 </head>
 <body>
 

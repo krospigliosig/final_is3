@@ -23,7 +23,7 @@ def registrar_usuario(request):
     
     return render(request, 'usuario/registro.html', {'form': form})
 
-@ratelimit(key='ip', rate='5/m', block=True)
+# @ratelimit(key='ip', rate='5/m', block=True)
 def validar_email_ajax(request):
     email = request.GET.get('email', '').strip().lower()
 
