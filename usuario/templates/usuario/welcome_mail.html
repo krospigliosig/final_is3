@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .logo img {
+      height: 80px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      background-color: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      text-align: center;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <!-- Puedes usar un logo institucional si tienes -->
+      <img src="https://www.example.edu/logo.png" alt="Logo Institución">
+    </div>
+
+    <h2>¡Bienvenido a inventar.IO, {{ user.username }}!</h2>
+    <p>
+        Te dejamos un manual con todo lo que puedes hacer desde tu nueva cuenta:
+    </p>
+
+    <p>
+        ¡Recuerda seguir las reglas de uso de tu institución para evitar sanciones!
+    </p>
+
+    <div class="footer">
+      Sistema Institucional · Universidad X<br>
+      Este es un mensaje automático. No respondas a este correo.
+    </div>
+  </div>
+</body>
+</html>
