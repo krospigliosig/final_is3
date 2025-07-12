@@ -1,4 +1,4 @@
-name: Crear Issues desde TODOs
+name: Detectar TODOs y crear Issues
 
 on:
   push:
@@ -15,4 +15,4 @@ jobs:
         with:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CLOSE_ISSUES: true
-          LABELS: "todo,auto"
+          LABELS: "todo"

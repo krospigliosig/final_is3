@@ -1,0 +1,14 @@
+name: Asignar Issues al Project
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  assign-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v1
+        with:
+          project-url: https://github.com/users/krospigliosig/projects/2
+          github-token: ${{ secrets.GITHUB_TOKEN }}
