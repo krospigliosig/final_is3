@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Inventario | Historial</title>
+  <title>Inventario | Usuarios</title>
 
-  <!-- Tipografía -->
+  <!-- Google Font usada en el mock-up -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Hoja de estilos compartida -->
-  <link rel="stylesheet" href="css/historial.css">
+  <!-- Hoja de estilos común -->
+  <link rel="stylesheet" href="css/usuarios.css">
 </head>
 <body>
 
-  <!-- ────── TOPBAR ────── -->
+  <!-- ────── BARRA SUPERIOR ────── -->
   <div class="header-container">
     <header>
       <div class="nav-section">
@@ -53,12 +54,10 @@
   <!-- ────── CONTENIDO ────── -->
   <main class="wrapper">
 
-    <h2 class="page-title">HISTORIAL DE DIEGO AQUINO</h2>
-
     <!-- buscador -->
     <div class="controls">
       <label class="search-box" style="flex:1;max-width:600px">
-        <input type="search" id="search" placeholder="Buscar articulo">
+        <input type="search" id="search" placeholder="Buscar Usuario">
         <svg class="icon-search" viewBox="0 0 24 24">
           <path d="M21 21 15.8 15.8m2.2-6.8A8 8 0 1 1 1 9.03 8 8 0 0 1 18 9.03Z"
                 stroke="currentColor" stroke-width="2"
@@ -67,23 +66,20 @@
       </label>
     </div>
 
-    <!-- tabla -->
-    <section class="table history">
+    <!-- tabla de usuarios -->
+    <section class="table">
       <ul class="table-row table-head">
-        <li>ID de articulo</li>
-        <li>Nombre Usuario</li>
-        <li>Categoria</li>
-        <li>Fecha reserva</li>
-        <li>Fecha devuelta</li>
-        <li>Reportar</li>
-        <li>Bloquear</li>
-        <li>Confirmar</li>
+        <li>Id de usuario</li>
+        <li>Nombre de Usuario</li>
+        <li>Correo</li>
+        <li>Estado</li>
+        <li>Eliminar</li>
       </ul>
 
       <ul id="table-body"></ul>
     </section>
   </main>
 
-  <script src="script/historial.js"></script>
+  <script src="script/usuarios.js"></script>
 </body>
 </html>

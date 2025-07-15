@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Inventario | Historial</title>
+  <title>Inventario | Artículos</title>
 
-  <!-- Tipografía -->
+  <!-- Google Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Hoja de estilos compartida -->
-  <link rel="stylesheet" href="css/historial.css">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/articulo.css">
 </head>
 <body>
 
@@ -50,40 +51,41 @@
     </header>
   </div>
 
-  <!-- ────── CONTENIDO ────── -->
+  <!-- ────── CUERPO ────── -->
   <main class="wrapper">
 
-    <h2 class="page-title">HISTORIAL DE DIEGO AQUINO</h2>
-
-    <!-- buscador -->
+    <!-- barra de búsqueda + botón -->
     <div class="controls">
-      <label class="search-box" style="flex:1;max-width:600px">
+      <label class="search-box">
         <input type="search" id="search" placeholder="Buscar articulo">
-        <svg class="icon-search" viewBox="0 0 24 24">
-          <path d="M21 21 15.8 15.8m2.2-6.8A8 8 0 1 1 1 9.03 8 8 0 0 1 18 9.03Z"
+        <svg class="icon-search" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 21 15.8 15.8m2.2-6.8A8 8 0 1 1 1
+                   9.03 8 8 0 0 1 18 9.03Z"
                 stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" fill="none"/>
         </svg>
       </label>
+
+      <button class="btn-primary" id="addBtn">Añadir artículo</button>
     </div>
 
     <!-- tabla -->
-    <section class="table history">
+    <section class="table">
       <ul class="table-row table-head">
-        <li>ID de articulo</li>
-        <li>Nombre Usuario</li>
+        <li>Id de articulo</li>
+        <li>Nombre de articulo</li>
         <li>Categoria</li>
-        <li>Fecha reserva</li>
-        <li>Fecha devuelta</li>
-        <li>Reportar</li>
-        <li>Bloquear</li>
-        <li>Confirmar</li>
+        <li>Disponibilidad</li>
+        <li>Editar</li>
+        <li>Eliminar</li>
       </ul>
 
+      <!-- cuerpo generado con JS -->
       <ul id="table-body"></ul>
     </section>
   </main>
 
-  <script src="script/historial.js"></script>
+  <!-- script -->
+  <script src="script/articulo.js"></script>
 </body>
 </html>
