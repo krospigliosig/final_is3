@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "nombre_articulo": "Pelota de fútbol",
+    "categoria": "Fútbol",
+    "disponibilidad": "Disponible",
+    "estado": "Buen estado",
+    "lugar": "Cancha mecánica",
+    "tiempo_maximo": "4 días",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": 2,
+    "nombre_articulo": "Pelota de fútbol",
+    "categoria": "Fútbol",
+    "disponibilidad": "No Disponible",
+    "estado": "Buen estado",
+    "lugar": "Cancha mecánica",
+    "tiempo_maximo": "3 días",
+    "imagen": "/template/image/futbol.jpg"
+  },
+
+  {
+    "id": 1,
+    "nombre_articulo": "Pelota de fútbol",
+    "categoria": "Básquet",
+    "disponibilidad": "Disponible",
+    "estado": "Buen estado",
+    "lugar": "Cancha mecánica",
+    "tiempo_maximo": "4 días",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": 2,
+    "nombre_articulo": "Pelota de fútbol",
+    "categoria": "Fútbol",
+    "disponibilidad": "No Disponible",
+    "estado": "Buen estado",
+    "lugar": "Cancha mecánica",
+    "tiempo_maximo": "3 días",
+    "imagen": "/template/image/futbol.jpg"
+  }
+]
