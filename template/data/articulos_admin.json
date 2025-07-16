@@ -3,60 +3,120 @@
     "id": "001",
     "nombre": "Pelota de futbol",
     "categoria": "futbol",
-    "disponibilidad": true
+    "estado": "Buen estado",
+    "disponibilidad": true,
+    "prestamo": "3",
+    "plazo": "4",
+    "ubicacion": "Cancha mecánica",
+    "horario": "10am - 9pm",
+    "descripcion": "Esta pelota tiene manchas y está apunto de romperse, es de la marca Cualquier Marca"
   },
   {
     "id": "002",
     "nombre": "Pelota de basquet",
     "categoria": "basquet",
-    "disponibilidad": false
+    "estado": "Desgastada",
+    "disponibilidad": false,
+    "prestamo": "5",
+    "plazo": "3",
+    "ubicacion": "Gimnasio principal",
+    "horario": "8am - 8pm",
+    "descripcion": "Pelota de basketball profesional, algo gastada pero en condiciones de uso"
   },
   {
     "id": "003",
     "nombre": "Pelota de voley",
     "categoria": "voley",
-    "disponibilidad": true
+    "estado": "Excelente estado",
+    "disponibilidad": true,
+    "prestamo": "2",
+    "plazo": "5",
+    "ubicacion": "Cancha de arena",
+    "horario": "9am - 7pm",
+    "descripcion": "Pelota de vóley profesional, casi nueva, marca Mikasa"
   },
   {
     "id": "004",
     "nombre": "Pesas 4k",
     "categoria": "otros",
-    "disponibilidad": true
+    "estado": "Buen estado",
+    "disponibilidad": true,
+    "prestamo": "1",
+    "plazo": "7",
+    "ubicacion": "Sala de pesas",
+    "horario": "6am - 10pm",
+    "descripcion": "Juego de pesas de 4kg, ideal para entrenamiento básico"
   },
   {
     "id": "005",
-    "nombre": "boya",
+    "nombre": "Boya",
     "categoria": "natacion",
-    "disponibilidad": true
+    "estado": "Nuevo",
+    "disponibilidad": true,
+    "prestamo": "4",
+    "plazo": "2",
+    "ubicacion": "Piscina olímpica",
+    "horario": "7am - 9pm",
+    "descripcion": "Boya de entrenamiento para natación, color rojo fluorescente"
   },
   {
     "id": "006",
-    "nombre": "bicicleta",
+    "nombre": "Bicicleta",
     "categoria": "ciclismo",
-    "disponibilidad": true
+    "estado": "Regular",
+    "disponibilidad": true,
+    "prestamo": "2",
+    "plazo": "3",
+    "ubicacion": "Estacionamiento de equipos",
+    "horario": "8am - 8pm",
+    "descripcion": "Bicicleta de montaña, necesita ajuste de frenos pero funcional"
   },
   {
     "id": "007",
-    "nombre": "soga",
+    "nombre": "Soga",
     "categoria": "otros",
-    "disponibilidad": true
+    "estado": "Buen estado",
+    "disponibilidad": true,
+    "prestamo": "6",
+    "plazo": "1",
+    "ubicacion": "Área de cardio",
+    "horario": "6am - 10pm",
+    "descripcion": "Soga para saltar profesional, con contador de vueltas integrado"
   },
   {
     "id": "008",
     "nombre": "Kit de tenis",
     "categoria": "tenis",
-    "disponibilidad": true
+    "estado": "Excelente estado",
+    "disponibilidad": true,
+    "prestamo": "3",
+    "plazo": "4",
+    "ubicacion": "Cancha de tenis 3",
+    "horario": "8am - 8pm",
+    "descripcion": "Kit completo que incluye 3 raquetas y 6 pelotas de tenis"
   },
   {
     "id": "009",
-    "nombre": "malla de voley",
+    "nombre": "Malla de voley",
     "categoria": "voley",
-    "disponibilidad": true
+    "estado": "Regular",
+    "disponibilidad": true,
+    "prestamo": "1",
+    "plazo": "7",
+    "ubicacion": "Cancha cubierta",
+    "horario": "9am - 9pm",
+    "descripcion": "Red de vóley profesional, con algunos hilos rotos pero funcional"
   },
   {
     "id": "010",
-    "nombre": "caja de pelotas",
+    "nombre": "Caja de pelotas",
     "categoria": "ping pong",
-    "disponibilidad": true
+    "estado": "Nuevo",
+    "disponibilidad": true,
+    "prestamo": "5",
+    "plazo": "2",
+    "ubicacion": "Sala de ping pong",
+    "horario": "10am - 10pm",
+    "descripcion": "Caja con 12 pelotas de ping pong profesionales de 3 estrellas"
   }
 ]
