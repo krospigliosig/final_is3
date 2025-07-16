@@ -1,0 +1,62 @@
+[
+  {
+    "id_usuario": "010",
+    "nombre": "Ronald Romario",
+    "correo": "rromario@unsa.edu.pe",
+    "estado": true
+  },
+  {
+    "id_usuario": "011",
+    "nombre": "Diego Aquino",
+    "correo": "daquino@unsa.edu.pe",
+    "estado": true
+  },
+  {
+    "id_usuario": "012",
+    "nombre": "Alber Llica",
+    "correo": "allica@unsa.edu.pe",
+    "estado": true
+  },
+  {
+    "id_usuario": "013",
+    "nombre": "Lucía Paredes",
+    "correo": "lparedes@unsa.edu.pe",
+    "estado": false
+  },
+  {
+    "id_usuario": "014",
+    "nombre": "Marco Quispe",
+    "correo": "mquispe@unsa.edu.pe",
+    "estado": true
+  },
+  {
+    "id_usuario": "015",
+    "nombre": "Fiorella Huamán",
+    "correo": "fhuaman@unsa.edu.pe",
+    "estado": true
+  },
+  {
+    "id_usuario": "016",
+    "nombre": "Jorge Condori",
+    "correo": "jcondori@unsa.edu.pe",
+    "estado": false
+  },
+  {
+    "id_usuario": "017",
+    "nombre": "Ana Ramos",
+    "correo": "aramos@unsa.edu.pe",
+    "estado": true
+  },
+  {
+    "id_usuario": "018",
+    "nombre": "Luis Vargas",
+    "correo": "lvargas@unsa.edu.pe",
+    "estado": true
+  },
+  {
+    "id_usuario": "019",
+    "nombre": "Camila Sosa",
+    "correo": "csosa@unsa.edu.pe",
+    "estado": true
+  }
+]

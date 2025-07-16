@@ -137,9 +137,6 @@ body {
     .show-dropdown {
       display: block !important;
     }
-    .estado {
-      color: #2ecc71;
-    }
     .estado-usuario {
       font-size: 12px;
     }
