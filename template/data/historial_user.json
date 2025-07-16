@@ -1,0 +1,72 @@
+[
+  {
+    "id": "001",
+    "nombre": "Pelota de futbol",
+    "categoria": "futbol",
+    "fecha_reserva": "01/03/25",
+    "fecha_devuelta": "04/03/25"
+  },
+  {
+    "id": "002",
+    "nombre": "Pelota de basquet",
+    "categoria": "basquet",
+    "fecha_reserva": "01/03/25",
+    "fecha_devuelta": "04/03/25"
+  },
+  {
+    "id": "003",
+    "nombre": "Pelota de voley",
+    "categoria": "voley",
+    "fecha_reserva": "01/03/25",
+    "fecha_devuelta": "04/03/25"
+  },
+  {
+    "id": "004",
+    "nombre": "Pesas 4k",
+    "categoria": "otros",
+    "fecha_reserva": "01/03/25",
+    "fecha_devuelta": "04/03/25"
+  },
+  {
+    "id": "005",
+    "nombre": "boya",
+    "categoria": "natacion",
+    "fecha_reserva": "24/02/25",
+    "fecha_devuelta": "28/02/25"
+  },
+  {
+    "id": "006",
+    "nombre": "bicicleta",
+    "categoria": "ciclismo",
+    "fecha_reserva": "22/02/25",
+    "fecha_devuelta": "28/02/25"
+  },
+  {
+    "id": "007",
+    "nombre": "soga",
+    "categoria": "otros",
+    "fecha_reserva": "21/02/25",
+    "fecha_devuelta": "28/02/25"
+  },
+  {
+    "id": "008",
+    "nombre": "Kit de tenis",
+    "categoria": "tenis",
+    "fecha_reserva": "15/02/25",
+    "fecha_devuelta": "20/02/25"
+  },
+  {
+    "id": "009",
+    "nombre": "malla de voley",
+    "categoria": "voley",
+    "fecha_reserva": "15/02/25",
+    "fecha_devuelta": "20/02/25"
+  },
+  {
+    "id": "010",
+    "nombre": "caja de pelotas",
+    "categoria": "ping pong",
+    "fecha_reserva": "01/02/25",
+    "fecha_devuelta": "14/02/25"
+  }
+]

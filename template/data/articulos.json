@@ -11,17 +11,17 @@
   },
   {
     "id": 2,
-    "nombre_articulo": "Pelota de fútbol",
-    "categoria": "Fútbol",
-    "disponibilidad": "No Disponible",
+    "nombre_articulo": "Pelota de voley",
+    "categoria": "Vóley",
+    "disponibilidad": "Disponible",
     "estado": "Buen estado",
     "lugar": "Cancha mecánica",
     "tiempo_maximo": "3 días",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/voley.jpg"
   },
 
   {
-    "id": 1,
+    "id": 3,
     "nombre_articulo": "Pelota de fútbol",
     "categoria": "Básquet",
     "disponibilidad": "Disponible",
@@ -31,7 +31,7 @@
     "imagen": "/template/image/futbol.jpg"
   },
   {
-    "id": 2,
+    "id": 4,
     "nombre_articulo": "Pelota de fútbol",
     "categoria": "Fútbol",
     "disponibilidad": "No Disponible",
