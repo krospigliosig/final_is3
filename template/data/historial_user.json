@@ -4,7 +4,7 @@
     "nombre": "Pelota de futbol",
     "categoria": "futbol",
     "fecha_reserva": "01/03/25",
-    "fecha_devuelta": "04/03/25"
+    "fecha_devuelta": null
   },
   {
     "id": "002",

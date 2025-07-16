@@ -44,21 +44,10 @@
     color: #666;
     }
 
-    .estado_tabla {
-    cursor: pointer;
-    font-weight: bold;
-    }
-
-    .estado_tabla.verde {
-    color: #6DD834; 
-    }
-
-    .estado_tabla.rojo {
-    color: #E42124; 
-    }
-
     button{
         border: none;
+        margin-left: 15px;
+
     }
     button i {
     color: rgb(0, 0, 0);
@@ -68,21 +57,30 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
-    .btn-historial {
+    .btn-reportar {
     border-radius: 6px;
-    background-color: #1379b4;
+    background-color: #688BFF;
     }
-    .btn-historial:hover {
-    background-color: #0e557e;
+    .btn-reportar:hover {
+    background-color: #4867cd;
     transform: scale(1.1);
     }
 
-    .btn-eliminar {
+    .btn-bloquear {
     border-radius: 6px;
-    background-color: #FB7070;
+    background-color: #FA4A4A;
     }
-    .btn-eliminar:hover {
-    background-color: #b44949;
+    .btn-bloquear:hover {
+    background-color: #c24545;
+    transform: scale(1.1);
+    }
+
+    .btn-confirmar {
+    border-radius: 6px;
+    background-color: #6DD834;
+    }
+    .btn-confirmar:hover {
+    background-color: #69b93f;
     transform: scale(1.1);
     }
 
@@ -139,7 +137,7 @@
 
   <div class="tabla-container">
     <div class="tabla-header">
-      <h2 class="titulo">LISTA DE USUARIOS</h2>
+      <h2 class="titulo" id="titulo-historial" >HISTORIA DEL USUARIO</h2>
     </div>
     <div class="barra-busqueda-container">
         <div class="barra-busqueda">
@@ -151,12 +149,14 @@
     <table class="tabla-articulos">
       <thead>
         <tr>
-          <th>ID de Usuario</th>
-          <th>Nombre de Usuario</th>
-          <th>Correo</th>
-          <th>Estado</th>
-          <th>historial</th>
-          <th>eliminar</th>
+          <th>ID de Articulo</th>
+          <th>Nombre de Articulo</th>
+          <th>Categoria</th>
+          <th>Fecha reserva</th>
+          <th>Fecha devuelta</th>
+          <th>Reportar</th>
+          <th>Bloquear</th>
+          <th>Confirmar</th>
         </tr>
       </thead>
        <tbody id="tabla-body"></tbody>
@@ -164,6 +164,6 @@
   </div>
 
   <script src="script/topbar.js"></script>
-  <script src="script/admin_usuarios.js"></script>
+  <script src="script/admin_histo_user.js"></script>
 </body>
 </html>

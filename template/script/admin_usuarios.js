@@ -38,11 +38,26 @@ function renderizarTabla(usuarios) {
           ● ${estado_usuario}
         </span>
       </td>
-      <td><button class="btn-historial" data-id="${item.id}" data-nombre="${item.nombre}"><i class="fa-regular fa-clock"></i></button></td>
+      <td><button class="btn-historial" data-id="${item.id_usuario}" data-nombre="${item.nombre}"><i class="fa-regular fa-clock"></i></button></td>
       <td><button class="btn-eliminar"><i class="fa-regular fa-trash-can"></i></button></td>
       `;
 
     tbody.appendChild(fila);
+
+    //boton ver
+    document.querySelectorAll('.btn-historial').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        const nombre = btn.getAttribute('data-nombre');
+
+        // Guardar en localStorage (alternativa: pasar en URL)
+        localStorage.setItem('usuario_id', id);
+        localStorage.setItem('usuario_nombre', nombre);
+
+        // Redirigir a la nueva página
+        window.location.href = 'admin_histo_user.html';
+      });
+    });
   });
   agregarListenersCambioEstado()
 }
