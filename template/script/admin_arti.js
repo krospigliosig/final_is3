@@ -101,7 +101,7 @@ function renderizarTabla(articulos) {
           ● ${disponibleTexto}
         </span>
       </td>
-      <td><button class="btn-historial"><i class="fa-regular fa-clock"></i></button></td>
+      <td><button class="btn-historial" data-id="${item.id}" data-nombre="${item.nombre}"><i class="fa-regular fa-clock"></i></button></td>
       <td><button class="btn-editar"><i class="fa-regular fa-pen-to-square"></i></button></td>
       <td><button class="btn-eliminar"><i class="fa-regular fa-trash-can"></i></button></td>
     `;
@@ -111,7 +111,23 @@ function renderizarTabla(articulos) {
       abrirModalEdicion(item);
     });
 
-    tbody.appendChild(fila);
+    tbody.appendChild(fila)
+
+    //boton ver
+    document.querySelectorAll('.btn-historial').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        const nombre = btn.getAttribute('data-nombre');
+
+        // Guardar en localStorage (alternativa: pasar en URL)
+        localStorage.setItem('articulo_id', id);
+        localStorage.setItem('articulo_nombre', nombre);
+
+        // Redirigir a la nueva página
+        window.location.href = 'historial_articulo.html';
+      });
+    });
+
   });
 
   agregarListenersCambioDisponibilidad();
