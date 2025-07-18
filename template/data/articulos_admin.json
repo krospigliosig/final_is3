@@ -23,7 +23,7 @@
     "ubicacion": "Gimnasio principal",
     "horario": "8am - 8pm",
     "descripcion": "Pelota de basketball profesional, algo gastada pero en condiciones de uso",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/basquet.jpg"
   },
   {
     "id": "003",
@@ -49,7 +49,7 @@
     "ubicacion": "Sala de pesas",
     "horario": "6am - 10pm",
     "descripcion": "Juego de pesas de 4kg, ideal para entrenamiento básico",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/pesas_4k.jpg"
   },
   {
     "id": "005",
@@ -62,7 +62,7 @@
     "ubicacion": "Piscina olímpica",
     "horario": "7am - 9pm",
     "descripcion": "Boya de entrenamiento para natación, color rojo fluorescente",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/boya.jpg"
   },
   {
     "id": "006",
@@ -75,7 +75,7 @@
     "ubicacion": "Estacionamiento de equipos",
     "horario": "8am - 8pm",
     "descripcion": "Bicicleta de montaña, necesita ajuste de frenos pero funcional",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/bicicleta.jpg"
   },
   {
     "id": "007",
@@ -88,7 +88,7 @@
     "ubicacion": "Área de cardio",
     "horario": "6am - 10pm",
     "descripcion": "Soga para saltar profesional, con contador de vueltas integrado",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/soga.jpg"
   },
   {
     "id": "008",
@@ -114,7 +114,7 @@
     "ubicacion": "Cancha cubierta",
     "horario": "9am - 9pm",
     "descripcion": "Red de vóley profesional, con algunos hilos rotos pero funcional",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/malla_voley.jpg"
   },
   {
     "id": "010",

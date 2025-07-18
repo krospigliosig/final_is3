@@ -17,7 +17,7 @@
     "estado": "Desgastada",
     "lugar": "Gimnasio principal",
     "tiempo_maximo": "3 días",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/basquet.jpg"
   },
   {
     "id": "003",
@@ -37,7 +37,7 @@
     "estado": "Buen estado",
     "lugar": "Sala de pesas",
     "tiempo_maximo": "7 días",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/pesas_4k.jpg"
   },
   {
     "id": "005",
@@ -47,7 +47,7 @@
     "estado": "Nuevo",
     "lugar": "Piscina olímpica",
     "tiempo_maximo": "2 días",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/boya.jpg"
   },
   {
     "id": "006",
@@ -57,7 +57,7 @@
     "estado": "Regular",
     "lugar": "Estacionamiento de equipos",
     "tiempo_maximo": "3 días",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/bicicleta.jpg"
   },
   {
     "id": "007",
@@ -67,7 +67,7 @@
     "estado": "Buen estado",
     "lugar": "Área de cardio",
     "tiempo_maximo": "1 día",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/soga.jpg"
   },
   {
     "id": "008",
@@ -87,7 +87,7 @@
     "estado": "Regular",
     "lugar": "Cancha cubierta",
     "tiempo_maximo": "7 días",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/malla_voley.jpg"
   },
   {
     "id": "010",
