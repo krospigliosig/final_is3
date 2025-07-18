@@ -87,6 +87,7 @@
       left: -50px;
       width: 200px;
       text-align: center;
+      z-index: 1;
     }
 
     .new-section {

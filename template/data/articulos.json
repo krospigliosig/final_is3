@@ -1,7 +1,7 @@
 [
   {
-    "id": 1,
-    "nombre_articulo": "Pelota de fútbol",
+    "id": "001",
+    "nombre_articulo": "Pelota de futbol",
     "categoria": "Fútbol",
     "disponibilidad": "Disponible",
     "estado": "Buen estado",
@@ -10,34 +10,103 @@
     "imagen": "/template/image/futbol.jpg"
   },
   {
-    "id": 2,
+    "id": "002",
+    "nombre_articulo": "Pelota de basquet",
+    "categoria": "Básquet",
+    "disponibilidad": "No disponible",
+    "estado": "Desgastada",
+    "lugar": "Gimnasio principal",
+    "tiempo_maximo": "3 días",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": "003",
     "nombre_articulo": "Pelota de voley",
     "categoria": "Vóley",
     "disponibilidad": "Disponible",
-    "estado": "Buen estado",
-    "lugar": "Cancha mecánica",
-    "tiempo_maximo": "3 días",
+    "estado": "Excelente estado",
+    "lugar": "Cancha de arena",
+    "tiempo_maximo": "5 días",
     "imagen": "/template/image/voley.jpg"
   },
-
   {
-    "id": 3,
-    "nombre_articulo": "Pelota de fútbol",
-    "categoria": "Básquet",
+    "id": "004",
+    "nombre_articulo": "Pesas 4k",
+    "categoria": "Otros",
     "disponibilidad": "Disponible",
     "estado": "Buen estado",
-    "lugar": "Cancha mecánica",
+    "lugar": "Sala de pesas",
+    "tiempo_maximo": "7 días",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": "005",
+    "nombre_articulo": "Boya",
+    "categoria": "Natación",
+    "disponibilidad": "Disponible",
+    "estado": "Nuevo",
+    "lugar": "Piscina olímpica",
+    "tiempo_maximo": "2 días",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": "006",
+    "nombre_articulo": "Bicicleta",
+    "categoria": "Ciclismo",
+    "disponibilidad": "Disponible",
+    "estado": "Regular",
+    "lugar": "Estacionamiento de equipos",
+    "tiempo_maximo": "3 días",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": "007",
+    "nombre_articulo": "Soga",
+    "categoria": "Otros",
+    "disponibilidad": "Disponible",
+    "estado": "Buen estado",
+    "lugar": "Área de cardio",
+    "tiempo_maximo": "1 día",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": "008",
+    "nombre_articulo": "Kit de tenis",
+    "categoria": "Tenis",
+    "disponibilidad": "Disponible",
+    "estado": "Excelente estado",
+    "lugar": "Cancha de tenis 3",
     "tiempo_maximo": "4 días",
     "imagen": "/template/image/futbol.jpg"
   },
   {
-    "id": 4,
-    "nombre_articulo": "Pelota de fútbol",
-    "categoria": "Fútbol",
-    "disponibilidad": "No Disponible",
-    "estado": "Buen estado",
-    "lugar": "Cancha mecánica",
-    "tiempo_maximo": "3 días",
+    "id": "009",
+    "nombre_articulo": "Malla de voley",
+    "categoria": "Vóley",
+    "disponibilidad": "Disponible",
+    "estado": "Regular",
+    "lugar": "Cancha cubierta",
+    "tiempo_maximo": "7 días",
     "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": "010",
+    "nombre_articulo": "Caja de pelotas",
+    "categoria": "Ping pong",
+    "disponibilidad": "Disponible",
+    "estado": "Nuevo",
+    "lugar": "Sala de ping pong",
+    "tiempo_maximo": "2 días",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+  "id": "011",
+  "nombre_articulo": "Pelota Wilson (Réplica)",
+  "categoria": "Otros",
+  "disponibilidad": "Disponible",
+  "estado": "Desgastado",
+  "lugar": "Almacén de objetos especiales",
+  "tiempo_maximo": "1 día",
+  "imagen": "/template/image/wilson.jpg"
   }
 ]

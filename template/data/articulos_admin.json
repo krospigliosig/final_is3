@@ -9,7 +9,8 @@
     "plazo": "4",
     "ubicacion": "Cancha mecánica",
     "horario": "10am - 9pm",
-    "descripcion": "Esta pelota tiene manchas y está apunto de romperse, es de la marca Cualquier Marca"
+    "descripcion": "Esta pelota tiene manchas y está apunto de romperse, es de la marca Cualquier Marca",
+    "imagen": "/template/image/futbol.jpg"
   },
   {
     "id": "002",
@@ -21,7 +22,8 @@
     "plazo": "3",
     "ubicacion": "Gimnasio principal",
     "horario": "8am - 8pm",
-    "descripcion": "Pelota de basketball profesional, algo gastada pero en condiciones de uso"
+    "descripcion": "Pelota de basketball profesional, algo gastada pero en condiciones de uso",
+    "imagen": "/template/image/futbol.jpg"
   },
   {
     "id": "003",
@@ -33,7 +35,8 @@
     "plazo": "5",
     "ubicacion": "Cancha de arena",
     "horario": "9am - 7pm",
-    "descripcion": "Pelota de vóley profesional, casi nueva, marca Mikasa"
+    "descripcion": "Pelota de vóley profesional, casi nueva, marca Mikasa",
+    "imagen": "/template/image/voley.jpg"
   },
   {
     "id": "004",
@@ -45,7 +48,8 @@
     "plazo": "7",
     "ubicacion": "Sala de pesas",
     "horario": "6am - 10pm",
-    "descripcion": "Juego de pesas de 4kg, ideal para entrenamiento básico"
+    "descripcion": "Juego de pesas de 4kg, ideal para entrenamiento básico",
+    "imagen": "/template/image/futbol.jpg"
   },
   {
     "id": "005",
@@ -57,7 +61,8 @@
     "plazo": "2",
     "ubicacion": "Piscina olímpica",
     "horario": "7am - 9pm",
-    "descripcion": "Boya de entrenamiento para natación, color rojo fluorescente"
+    "descripcion": "Boya de entrenamiento para natación, color rojo fluorescente",
+    "imagen": "/template/image/futbol.jpg"
   },
   {
     "id": "006",
@@ -69,7 +74,8 @@
     "plazo": "3",
     "ubicacion": "Estacionamiento de equipos",
     "horario": "8am - 8pm",
-    "descripcion": "Bicicleta de montaña, necesita ajuste de frenos pero funcional"
+    "descripcion": "Bicicleta de montaña, necesita ajuste de frenos pero funcional",
+    "imagen": "/template/image/futbol.jpg"
   },
   {
     "id": "007",
@@ -81,7 +87,8 @@
     "plazo": "1",
     "ubicacion": "Área de cardio",
     "horario": "6am - 10pm",
-    "descripcion": "Soga para saltar profesional, con contador de vueltas integrado"
+    "descripcion": "Soga para saltar profesional, con contador de vueltas integrado",
+    "imagen": "/template/image/futbol.jpg"
   },
   {
     "id": "008",
@@ -93,7 +100,8 @@
     "plazo": "4",
     "ubicacion": "Cancha de tenis 3",
     "horario": "8am - 8pm",
-    "descripcion": "Kit completo que incluye 3 raquetas y 6 pelotas de tenis"
+    "descripcion": "Kit completo que incluye 3 raquetas y 6 pelotas de tenis",
+    "imagen": "/template/image/futbol.jpg"
   },
   {
     "id": "009",
@@ -105,7 +113,8 @@
     "plazo": "7",
     "ubicacion": "Cancha cubierta",
     "horario": "9am - 9pm",
-    "descripcion": "Red de vóley profesional, con algunos hilos rotos pero funcional"
+    "descripcion": "Red de vóley profesional, con algunos hilos rotos pero funcional",
+    "imagen": "/template/image/futbol.jpg"
   },
   {
     "id": "010",
@@ -117,6 +126,20 @@
     "plazo": "2",
     "ubicacion": "Sala de ping pong",
     "horario": "10am - 10pm",
-    "descripcion": "Caja con 12 pelotas de ping pong profesionales de 3 estrellas"
+    "descripcion": "Caja con 12 pelotas de ping pong profesionales de 3 estrellas",
+    "imagen": "/template/image/futbol.jpg"
+  },
+  {
+    "id": "011",
+    "nombre": "Pelota Wilson (Réplica)",
+    "categoria": "Otros",
+    "estado": "Desgastado",
+    "disponibilidad": true,
+    "prestamo": "5",
+    "plazo": "2",
+    "ubicacion": "Almacén de objetos especiales",
+    "horario": "10am - 10pm",
+    "descripcion_adicional": "Réplica de la famosa pelota Wilson de la película 'Náufrago', con marca de sangre en la cara como en el film. Incluye certificado de autenticidad.",
+    "imagen": "/template/image/wilson.jpg"
   }
 ]
