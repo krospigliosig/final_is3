@@ -1,0 +1,10 @@
+<!-- listar_articulos.html -->
+<!DOCTYPE html>
+<html>
+<head><title>Lista de artículos</title></head>
+<body>
+  {% for articulo in articulos %}
+    <p>{{ articulo.nombre }}</p>
+  {% endfor %}
+</body>
+</html>
