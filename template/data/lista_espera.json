@@ -1,0 +1,27 @@
+[
+  {
+    "id_articulo": "001",
+    "cola_usuarios": [
+      {
+        "id_usuario": "U001",
+        "nombre": "Juan Pérez",
+        "fecha_solicitud": "2025-07-16T10:30:00"
+      },
+      {
+        "id_usuario": "U002",
+        "nombre": "Ana López",
+        "fecha_solicitud": "2025-07-16T11:00:00"
+      }
+    ]
+  },
+  {
+    "id_articulo": "002",
+    "cola_usuarios": [
+      {
+        "id_usuario": "U003",
+        "nombre": "Carlos Ruiz",
+        "fecha_solicitud": "2025-07-16T12:15:00"
+      }
+    ]
+  }
+]

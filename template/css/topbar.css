@@ -24,13 +24,14 @@ body {
     .logo {
       color: #66fcf1;
       font-size: 24px;
-      margin-right: 30px;
+      margin-right: 40px;
     }
 
     .nav-section {
       display: flex;
       align-items: center;
       flex-grow: 1;
+      margin-left: 30px;
     }
 
     .nav-categorias {
@@ -38,11 +39,12 @@ body {
     }
 
     .nav-categorias a {
-      margin: 0 15px;
+      margin: 0 25px;
       text-decoration: none;
       color: #c5c6c7;
       font-weight: normal;
       transition: all 0.2s;
+      font-size: 16px;
     }
 
     .nav-categorias a:hover {

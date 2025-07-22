@@ -1,0 +1,8 @@
+{
+  "id_usuario": 1,
+  "nombre_usuario": "Diego Aquino",
+  "id_articulo": "BMT-021",
+  "nombre_articulo": "Bicicleta de montaña",
+  "fecha_reserva": "2025-06-15",
+  "prestamo_maximo": "3"
+}

@@ -6,6 +6,7 @@
   <title>InventarIO - Artículos Deportivos</title>
   <link rel="stylesheet" href="css/topbar.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/bloqueo.css">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <script src="data/articulos.json"></script>
@@ -29,8 +30,10 @@
               <a href="#" class="filtro-categoria" data-categoria="Otros">Otros</a>
               <a href="#" class="filtro-categoria" data-categoria="Ejercicio">Ejercicio</a>
               <a href="#" class="filtro-categoria" data-categoria="Calistenia">Calistenia</a>
+              
             </div>
           </div>
+              <a href="carrito.html"> <i class="fas fa-shopping-cart"></i></a>
         </nav>
       </div>
       
@@ -49,7 +52,6 @@
                 <a href="#"><i class="fas fa-headset"></i> Comunicar con Admin</a>
                 <a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
               </div>
-              <i class="fas fa-shopping-cart"></i>
             </div>
           </div>
         </div>
@@ -190,6 +192,27 @@
 </div>
   <div class="cards-container" id="cards-container">
   </div>
+  <div id="modal-bloqueado" class="modal-bloqueado">
+  <div class="modal-contenido">
+    <h2>🔒 Usuario bloqueado por incumplimiento de devolución</h2>
+    <p id="nombre-usuario-bloqueado"></p>
+    <p>Su cuenta ha sido temporalmente bloqueada debido a la no devolución del siguiente artículo en el plazo establecido:</p>
+    <ul>
+      <li>Artículo: <span id="nombre-articulo"></span></li>
+      <li>Fecha de reserva: <span id="fecha-reserva"></span></li>
+      <li>Fecha límite de devolución: <span id="fecha-limite"></span></li>
+      <li>Días de retraso: <span id="dias-retraso"></span> días</li>
+    </ul>
+    <h2>🛠 ¿Cómo desbloquear su cuenta?</h2>
+    <p>Para reactivar su cuenta deberá:</p>
+    <ol>
+      <li>Devolver el artículo personalmente en el módulo correspondiente.</li>
+      <li>Acercarse al responsable del módulo o enviar un correo al administrador.</li>
+    </ol>
+    <p>Gracias por su comprensión. El cumplimiento de los plazos permite que todos los estudiantes puedan acceder equitativamente al intario deportivo.</p>
+  </div>
+</div>
+
   <script src="script/topbar.js"></script>
   <script src="script/cards.js"></script>
 </body>

@@ -1,5 +1,5 @@
 {
   "nombre": "Diego Aquino",
-  "estado": "activo",
-  "rol": "Admin"
+  "estado": "bloqueado",
+  "rol": "admin"
 }

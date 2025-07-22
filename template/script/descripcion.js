@@ -45,6 +45,47 @@ document.addEventListener('DOMContentLoaded', () => {
         btnListaEspera.textContent = 'Unirse a lista de espera';
         btnListaEspera.className = 'btn btn-lista-espera';
         contenedorBotones.appendChild(btnListaEspera);
+
+        // Evento click en el botón de lista de espera
+        btnListaEspera.addEventListener('click', () => {
+          fetch('data/lista_espera.json')
+            .then(res => res.json())
+            .then(listas => {
+              const listaArticulo = listas.find(entry => entry.id_articulo === idArticulo);
+              const usuariosEnCola = listaArticulo ? listaArticulo.cola_usuarios.length : 0;
+
+              const numeroEspera = usuariosEnCola + 1;
+
+              // Calcular fecha estimada
+              const diasEstimados = parseInt(articulo.prestamo) * usuariosEnCola;
+              const hoy = new Date();
+              hoy.setDate(hoy.getDate() + diasEstimados);
+              const fechaEstimada = hoy.toLocaleDateString('es-ES');
+
+              // Mostrar popup con datos
+              document.getElementById('numero-espera').textContent = `#${numeroEspera}`;
+              document.getElementById('fecha-estimada').textContent = `Fecha estimada: ${fechaEstimada}`;
+              
+              document.getElementById('modal-espera').style.display = 'block';
+            })
+            .catch(err => {
+              console.error('Error al cargar lista de espera:', err);
+              alert('No se pudo acceder a la lista de espera');
+            });
+        });
+        // También cerrar si se hace clic fuera del modal
+        window.addEventListener('click', function(e) {
+          const modal = document.getElementById('modal-espera');
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+
+        // Botón de confirmar espera
+        document.getElementById('confirmar-espera').addEventListener('click', () => {
+          document.getElementById('modal-espera').style.display = 'none';
+          alert('Tu solicitud ha sido registrada.');
+        });
       }
     })
     .catch(err => {

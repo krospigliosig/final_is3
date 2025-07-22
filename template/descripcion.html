@@ -30,6 +30,7 @@
               <a href="#" class="filtro-categoria" data-categoria="Calistenia">Calistenia</a>
             </div>
           </div>
+          <a href="carrito.html"> <i class="fas fa-shopping-cart"></i></a>
         </nav>
       </div>
       
@@ -48,7 +49,6 @@
                 <a href="#"><i class="fas fa-headset"></i> Comunicar con Admin</a>
                 <a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
               </div>
-              <i class="fas fa-shopping-cart"></i>
             </div>
           </div>
         </div>
@@ -82,6 +82,18 @@
       </div>
     </div>
   </div>
+  <!-- Modal de Lista de Espera -->
+  <div id="modal-espera" class="modal">
+    <div class="modal-content">
+      <h2>¡Te has unido a la lista de espera!</h2>
+      <p class="numero-espera">Número de espera:</p>
+      <div class="numero-grande" id="numero-espera">#4</div>
+      <p id="fecha-estimada"></p>
+      <p class="mensaje-estatico">Se agregará automáticamente al carrito cuando esté disponible.</p>
+      <button id="confirmar-espera" class="btn btn-confirmar">Confirmar espera</button>
+    </div>
+  </div>
+
   <script src="script/topbar.js"></script>
   <script src="script/descripcion.js"></script>
 </body>
