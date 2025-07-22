@@ -116,4 +116,19 @@ fetch('data/usuario.json')
     console.error('Error al cargar datos del usuario:', error);
   });
 
+const cerrarSesionBtn = document.getElementById('cerrar-sesion');
+
+cerrarSesionBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  // Elimina cualquier info guardada si fuera necesario
+  localStorage.clear();
+  sessionStorage.clear();
+
+  // Puedes también eliminar cookies aquí si las usas
+
+  // Redirige a login.html
+  window.location.href = 'login.html';
+});
+
 });
