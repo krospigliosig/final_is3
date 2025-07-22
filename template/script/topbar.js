@@ -80,8 +80,7 @@ fetch('data/usuario.json')
       navCategorias.insertBefore(linkUsuarios, navCategorias.children[0]);
       navCategorias.insertBefore(linkArticulos, navCategorias.children[1]);
 
-    } else {
-      if (usuario.estado.toLowerCase() === 'activo') {
+    } else if (usuario.estado.toLowerCase() === 'activo') {
         estadoUsuario.textContent = '● Activo';
         estadoUsuario.classList.add('estado-activo');
       } else {
@@ -111,7 +110,7 @@ fetch('data/usuario.json')
           });
       }
     }
-  })
+  )
   .catch(error => {
     console.error('Error al cargar datos del usuario:', error);
   });

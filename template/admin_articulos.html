@@ -349,13 +349,13 @@
         <h2 id="titulo-modal">Añadir Nuevo Artículo</h2>
         <form id="form-articulo">
             <div class="fila-form">
-                <label>Nombre del Artículo:</label>
-                <input type="text" name="nombre" required>
+                <label for="nombre-articulo">Nombre del Artículo:</label>
+                <input type="text" id="nombre-articulo" name="nombre" required>
             </div>
             <div class="fila-doble">
                 <div class="campo">
-                    <label>Categoría:</label>
-                    <input list="categorias" name="categoria" required>
+                    <label for="categoria">Categoría:</label>
+                    <input list="categorias" id="categoria" name="categoria" required>
                     <datalist id="categorias">
                         <option value="Fútbol">
                         <option value="Vóley">
@@ -367,8 +367,8 @@
                     </datalist>
                 </div>
                 <div class="campo">
-                    <label>Estado:</label>
-                    <select name="estado">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado">
                         <option value="Disponible">Disponible</option>
                         <option value="No disponible">No disponible</option>
                     </select>
@@ -377,35 +377,35 @@
 
             <div class="fila-doble">
                 <div class="campo">
-                    <label>Préstamo (días):</label>
-                    <input type="number" name="prestamo_dias" min="1" required>
+                    <label for="prestamo-dias">Préstamo (días):</label>
+                    <input type="number" id="prestamo-dias" name="prestamo_dias" min="1" required>
                 </div>
                 <div class="campo">
-                    <label>Plazo máximo (días):</label>
-                    <input type="number" name="plazo_max" min="1" required>
+                    <label for="plazo-max">Plazo máximo (días):</label>
+                    <input type="number" id="plazo-max" name="plazo_max" min="1" required>
                 </div>
             </div>
-        <div class="fila-form">
-            <label>Ubicación:</label>
-            <input type="text" name="ubicacion" required>
-        </div>
-        <div class="fila-form">
-            <label>Horario:</label>
-            <input type="text" name="horario" required>
-        </div>
-        <div class="fila-form">
-            <label>Descripción:</label>
-            <textarea name="descripcion" rows="3" required></textarea>
-        </div>
-        <div class="foto-articulo">
-            <label>Foto del artículo:</label>
-            <input type="file" name="imagen" accept="image/*" required>
-        </div>
+            <div class="fila-form">
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" required>
+            </div>
+            <div class="fila-form">
+                <label for="horario">Horario:</label>
+                <input type="text" id="horario" name="horario" required>
+            </div>
+            <div class="fila-form">
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="3" required></textarea>
+            </div>
+            <div class="foto-articulo">
+                <label for="imagen">Foto del artículo:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+            </div>
 
-        <button type="submit" class="btn-guardar" id="btn-submit-articulo">Añadir +</button>
+            <button type="submit" class="btn-guardar" id="btn-submit-articulo">Añadir +</button>
         </form>
     </div>
-    </div>
+</div>
 
   <script src="script/topbar.js"></script>
   <script src="script/admin_arti.js"></script>
