@@ -4,7 +4,7 @@
       gap: 20px;
       padding: 40px;
       position: relative;
-      margin-left: 7%;
+      margin-left: 2%;
     }
     .card {
       width: 300px;
@@ -72,8 +72,6 @@
     .no-disponible {
       color: #E42168;
     }
-
-
     .estado {
       color: #2ecc71;
     }
@@ -158,3 +156,5 @@
     text-align: left;
     font-size: 10px;
     }
+
+   

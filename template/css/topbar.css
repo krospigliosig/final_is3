@@ -3,6 +3,7 @@ body {
       font-family: 'Rajdhani', sans-serif;
       background-color: #001123;
       color: #374452;
+      overflow-x: hidden;
     }
     
 .header-container {
