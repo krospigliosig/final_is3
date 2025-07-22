@@ -63,12 +63,14 @@
       background-color: #688BFF;
       color: #ffffff;
       border: none;
+      margin-left: 19%;
     }
 
     .btn-carrito {
       background-color: #C061FF;
       color: #ffffff;
       border: none;
+      margin-left: 6%;
     }
 
     .btn:hover {
@@ -127,19 +129,19 @@
       display: block !important;
     }
 .btn-lista-espera {
-  background-color: #ffa500;
+  background-color: #688BFF;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   margin: 10px 30%;       
   display: block;
 }
 
 .btn-lista-espera:hover {
-  background-color: #ff8c00;
+  background-color: #3551af;
 }
 .modal {
   display: none;
@@ -151,7 +153,7 @@
 }
 
 .modal-content {
-  background-color: white;
+  background-color: #0D1C31;
   margin: 10% auto;
   padding: 30px;
   border-radius: 10px;
@@ -159,18 +161,19 @@
   max-width: 400px;
   text-align: center;
   font-family: 'Rajdhani', sans-serif;
+  color: #FFFFFF;
 }
 
 .numero-grande {
   font-size: 48px;
   font-weight: bold;
-  color: #ffa500;
+  color: #66FCF1;
   margin: 15px 0;
 }
 
 .btn-confirmar {
   margin-top: 20px;
-  background-color: #28a745;
+  background-color: #C061FF;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -180,5 +183,5 @@
 }
 
 .btn-confirmar:hover {
-  background-color: #218838;
+  background-color: #A749E3;
 }

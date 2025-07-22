@@ -34,6 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnReservar = document.getElementById('btn-reservar');
       const btnCarrito = document.getElementById('btn-carrito');
       const contenedorBotones = document.getElementById('botones-articulo');
+      btnReservar.addEventListener('click', () => {
+        alert('Artículo reservado');
+      });
+
+      btnCarrito.addEventListener('click', () => {
+        alert('Artículo agregado al carrito');
+      });
+
 
       if (!articulo.disponibilidad) {
         // Oculta los botones normales
