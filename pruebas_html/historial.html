@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Inventario | Historial</title>
+
+  <!-- Tipografía -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos compartida -->
+  <link rel="stylesheet" href="css/historial.css">
+</head>
+<body>
+
+  <!-- ────── TOPBAR ────── -->
+  <header class="topbar">
+    <h1 class="logo">inventar<span class="logo-num">10</span></h1>
+
+    <nav class="main-nav">
+      <a href="#" class="active">Usuarios</a>
+      <a href="#">Artículos</a>
+      <a href="#">Fútbol</a>
+      <a href="#">Voley</a>
+      <a href="#">Basquet</a>
+      <a href="#">Natación</a>
+      <a href="#">Más artículos</a>
+    </nav>
+
+    <div class="user-box">
+      <div class="user-meta">
+        <span class="user-name">Ronald Romario</span>
+        <span class="user-status">Activo <span class="dot online"></span></span>
+        <span class="user-role">Admin</span>
+      </div>
+      <svg class="user-icon" viewBox="0 0 24 24"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5ZM4 20.5a8 8 0 0 1 16 0Z" fill="currentColor"/></svg>
+    </div>
+  </header>
+
+  <!-- ────── CONTENIDO ────── -->
+  <main class="wrapper">
+
+    <h2 class="page-title">HISTORIAL DE DIEGO AQUINO</h2>
+
+    <!-- buscador -->
+    <div class="controls">
+      <label class="search-box" style="flex:1;max-width:600px">
+        <input type="search" id="search" placeholder="Buscar articulo">
+        <svg class="icon-search" viewBox="0 0 24 24">
+          <path d="M21 21 15.8 15.8m2.2-6.8A8 8 0 1 1 1 9.03 8 8 0 0 1 18 9.03Z"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" fill="none"/>
+        </svg>
+      </label>
+    </div>
+
+    <!-- tabla -->
+    <section class="table history">
+      <ul class="table-row table-head">
+        <li>ID de articulo</li>
+        <li>Nombre Usuario</li>
+        <li>Categoria</li>
+        <li>Fecha reserva</li>
+        <li>Fecha devuelta</li>
+        <li>Reportar</li>
+        <li>Bloquear</li>
+        <li>Confirmar</li>
+      </ul>
+
+      <ul id="table-body"></ul>
+    </section>
+  </main>
+
+  <script src="script/historial.js"></script>
+</body>
+</html>

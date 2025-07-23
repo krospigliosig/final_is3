@@ -1,0 +1,92 @@
+[
+  {
+    "id_prestamo": "P001",
+    "id_articulo": "001",
+    "id_usuario": "010",
+    "nombre_usuario": "Ronald Romario",
+    "correo": "rromario@unsa.edu.pe",
+    "fecha_reserva": "10/07/25",
+    "fecha_devuelta": null
+  },
+  {
+    "id_prestamo": "P002",
+    "id_articulo": "001",
+    "id_usuario": "011",
+    "nombre_usuario": "Diego Aquino",
+    "correo": "daquino@unsa.edu.pe",
+    "fecha_reserva": "23/05/25",
+    "fecha_devuelta": "27/05/25"
+  },
+  {
+    "id_prestamo": "P003",
+    "id_articulo": "001",
+    "id_usuario": "012",
+    "nombre_usuario": "Alber Llica",
+    "correo": "allica@unsa.edu.pe",
+    "fecha_reserva": "10/05/25",
+    "fecha_devuelta": "15/05/25"
+  },
+  {
+    "id_prestamo": "P004",
+    "id_articulo": "001",
+    "id_usuario": "013",
+    "nombre_usuario": "Lucía Paredes",
+    "correo": "lparedes@unsa.edu.pe",
+    "fecha_reserva": "16/04/25",
+    "fecha_devuelta": "19/06/25"
+  },
+  {
+    "id_prestamo": "P005",
+    "id_articulo": "002",
+    "id_usuario": "014",
+    "nombre_usuario": "Marco Quispe",
+    "correo": "mquispe@unsa.edu.pe",
+    "fecha_reserva": "12/04/25",
+    "fecha_devuelta": "14/06/25"
+  },
+  {
+    "id_prestamo": "P006",
+    "id_articulo": "002",
+    "id_usuario": "015",
+    "nombre_usuario": "Fiorella Huamán",
+    "correo": "fhuaman@unsa.edu.pe",
+    "fecha_reserva": "20/03/25",
+    "fecha_devuelta": "25/03/25"
+  },
+  {
+    "id_prestamo": "P007",
+    "id_articulo": "002",
+    "id_usuario": "016",
+    "nombre_usuario": "Jorge Condori",
+    "correo": "jcondori@unsa.edu.pe",
+    "fecha_reserva": "01/03/25",
+    "fecha_devuelta": "05/03/25"
+  },
+  {
+    "id_prestamo": "P008",
+    "id_articulo": "002",
+    "id_usuario": "017",
+    "nombre_usuario": "Ana Ramos",
+    "correo": "aramos@unsa.edu.pe",
+    "fecha_reserva": "24/02/25",
+    "fecha_devuelta": "28/02/25"
+  },
+  {
+    "id_prestamo": "P009",
+    "id_articulo": "003",
+    "id_usuario": "018",
+    "nombre_usuario": "Luis Vargas",
+    "correo": "lvargas@unsa.edu.pe",
+    "fecha_reserva": "02/02/25",
+    "fecha_devuelta": "03/02/25"
+  },
+  {
+    "id_prestamo": "P010",
+    "id_articulo": "003",
+    "id_usuario": "019",
+    "nombre_usuario": "Camila Sosa",
+    "correo": "csosa@unsa.edu.pe",
+    "fecha_reserva": "15/01/25",
+    "fecha_devuelta": "18/01/25"
+  }
+]

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InventarIO - Artículos Deportivos</title>
+  <link rel="stylesheet" href="css/topbar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/descripcion.css">
+</head>
+<body>
+  <div class="header-container">
+    <header>
+      <div class="nav-section">
+        <div class="logo">inventarIO</div>
+        <nav class="nav-categorias">
+          <a href="#" class="filtro-categoria" data-categoria="Todos">Todos</a>
+          <a href="#" class="filtro-categoria" data-categoria="Fútbol">Fútbol</a>
+          <a href="#" class="filtro-categoria" data-categoria="Vóley">Vóley</a>
+          <a href="#" class="filtro-categoria" data-categoria="Básquet">Básquet</a>
+          <a href="#" class="filtro-categoria" data-categoria="Natación">Natación</a>
+          
+         
+          <div class="dropdown-categoria">
+            <a href="#" id="dropdownToggle">Más artículos ▾</a>
+            <div class="dropdown-menu">
+              <a href="#" class="filtro-categoria" data-categoria="Otros">Otros</a>
+              <a href="#" class="filtro-categoria" data-categoria="Ejercicio">Ejercicio</a>
+              <a href="#" class="filtro-categoria" data-categoria="Calistenia">Calistenia</a>
+            </div>
+          </div>
+          <a href="carrito.html"> <i class="fas fa-shopping-cart"></i></a>
+        </nav>
+      </div>
+      
+      <div class="user-section">
+        <div class="usuario-info">
+          <div class="user-text">
+            <div class="user-name" id="nombre-usuario">Cargando...</div>
+            <div class="estado-usuario" id="estado-usuario">...</div>
+          </div>
+          <div class="user-icons">
+            <div class="profile-dropdown">
+              <i class="fas fa-user" id="profile-icon"></i>
+              <div class="dropdown-content">
+                <a href="carrito.html"><i class="fas fa-shopping-cart"></i> Mi Carrito</a>
+                <a href="historial_user.html"><i class="fas fa-history"></i> Historial de Reservas</a>
+                <a href="#"><i class="fas fa-headset"></i> Comunicar con Admin</a>
+                <a href="#" id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="main-content">
+    <div class="left-section">
+      <img id="imagen-articulo" src="" alt="foto articulo">
+    </div>
+
+    <div class="right-section">
+      <h1 class="item-title" id="nombre-articulo">Cargando...</h1>
+
+      <div class="item-details">
+        <p><strong>Descripción:</strong> <span id="descripcion-articulo"></span></p>
+        <p><strong>Categoría:</strong> <span id="categoria-articulo"></span></p>
+        <p><strong>Estado:</strong> <span id="estado-articulo"></span></p>
+        <p><strong>Código:</strong> <span id="codigo-articulo"></span></p>
+        <p><strong>Disponibilidad:</strong> <span id="disponibilidad-articulo"></span></p>
+        <p><strong>Préstamo máximo:</strong> <span id="prestamo-articulo"></span></p>
+        <p><strong>Plazo máximo:</strong> <span id="plazo-articulo"></span></p>
+        <p><strong>Ubicación:</strong> <span id="ubicacion-articulo"></span></p>
+        <p><strong>Horario:</strong> <span id="horario-articulo"></span></p>
+      </div>
+
+      <div class="button-group" id="botones-articulo">
+        <button class="btn btn-reservar" id="btn-reservar">Reservar ahora</button>
+        <button class="btn btn-carrito" id="btn-carrito">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal de Lista de Espera -->
+  <div id="modal-espera" class="modal">
+    <div class="modal-content">
+      <h2>¡Te has unido a la lista de espera!</h2>
+      <p class="numero-espera">Número de espera:</p>
+      <div class="numero-grande" id="numero-espera">#4</div>
+      <p id="fecha-estimada"></p>
+      <p class="mensaje-estatico">Se agregará automáticamente al carrito cuando esté disponible.</p>
+      <button id="confirmar-espera" class="btn btn-confirmar">Confirmar espera</button>
+    </div>
+  </div>
+
+  <script src="script/topbar.js"></script>
+  <script src="script/descripcion.js"></script>
+</body>
+</html>

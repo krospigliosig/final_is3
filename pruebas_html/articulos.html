@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Inventario | Artículos</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/articulos.css">
+</head>
+<body>
+
+  <!-- ────── TOPBAR ────── -->
+  <header class="topbar">
+    <h1 class="logo">
+      inventar<span class="logo-num">10</span>
+    </h1>
+
+    <nav class="main-nav">
+      <a href="#">Usuarios</a>
+      <a href="#" class="active">Artículos</a>
+      <a href="#">Fútbol</a>
+      <a href="#">Voley</a>
+      <a href="#">Basquet</a>
+      <a href="#">Natación</a>
+      <a href="#">Más artículos</a>
+    </nav>
+
+    <div class="user-box">
+      <div class="user-meta">
+        <span class="user-name">Ronald Romario</span>
+        <span class="user-status">
+          Activo <span class="dot online"></span>
+        </span>
+        <span class="user-role">Admin</span>
+      </div>
+
+      <!-- ícono de usuario -->
+      <svg class="user-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5ZM4 20.5a8 8 0 0 1 16 0Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ────── CUERPO ────── -->
+  <main class="wrapper">
+
+    <!-- barra de búsqueda + botón -->
+    <div class="controls">
+      <label class="search-box">
+        <input type="search" id="search" placeholder="Buscar articulo">
+        <svg class="icon-search" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 21 15.8 15.8m2.2-6.8A8 8 0 1 1 1
+                   9.03 8 8 0 0 1 18 9.03Z"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" fill="none"/>
+        </svg>
+      </label>
+
+      <button class="btn-primary" id="addBtn">Añadir artículo</button>
+    </div>
+
+    <!-- tabla -->
+    <section class="table">
+      <ul class="table-row table-head">
+        <li>Id de articulo</li>
+        <li>Nombre de articulo</li>
+        <li>Categoria</li>
+        <li>Disponibilidad</li>
+        <li>Editar</li>
+        <li>Eliminar</li>
+      </ul>
+
+      <!-- cuerpo generado con JS -->
+      <ul id="table-body"></ul>
+    </section>
+  </main>
+
+  <!-- script -->
+  <script src="script/articulo.js"></script>
+</body>
+</html>

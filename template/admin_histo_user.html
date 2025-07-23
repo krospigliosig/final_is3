@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InventarIO - Artículos Deportivos</title>
+  <link rel="stylesheet" href="css/topbar.css">
+  <link rel="stylesheet" href="css/tabla.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .barra-busqueda-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000A17;
+    padding: 1% 3% ;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 12px;
+    }
+
+    .barra-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: #051427;
+    padding: 5px 12px;
+    border-radius: 8px;
+    width: 45%;
+    max-width: 500px;
+    }
+
+    .barra-busqueda input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Rajdhani', sans-serif;
+    }
+
+    .icono-busqueda {
+    margin-right: 10px;
+    color: #666;
+    }
+
+    button{
+        border: none;
+        margin-left: 15px;
+
+    }
+    button i {
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-reportar {
+    border-radius: 6px;
+    background-color: #688BFF;
+    }
+    .btn-reportar:hover {
+    background-color: #4867cd;
+    transform: scale(1.1);
+    }
+
+    .btn-bloquear {
+    border-radius: 6px;
+    background-color: #FA4A4A;
+    }
+    .btn-bloquear:hover {
+    background-color: #c24545;
+    transform: scale(1.1);
+    }
+
+    .btn-confirmar {
+    border-radius: 6px;
+    background-color: #6DD834;
+    }
+    .btn-confirmar:hover {
+    background-color: #69b93f;
+    transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    <header>
+      <div class="nav-section">
+        <div class="logo">inventarIO</div>
+        <nav class="nav-categorias">
+          <a href="#" class="filtro-categoria" data-categoria="Todos">Todos</a>
+          <a href="#" class="filtro-categoria" data-categoria="Fútbol">Fútbol</a>
+          <a href="#" class="filtro-categoria" data-categoria="Vóley">Vóley</a>
+          <a href="#" class="filtro-categoria" data-categoria="Básquet">Básquet</a>
+          <a href="#" class="filtro-categoria" data-categoria="Natación">Natación</a>
+          
+         
+          <div class="dropdown-categoria">
+            <a href="#" id="dropdownToggle">Más artículos ▾</a>
+            <div class="dropdown-menu">
+              <a href="#" class="filtro-categoria" data-categoria="Otros">Otros</a>
+              <a href="#" class="filtro-categoria" data-categoria="Ejercicio">Ejercicio</a>
+              <a href="#" class="filtro-categoria" data-categoria="Calistenia">Calistenia</a>
+            </div>
+          </div>
+          <a href="carrito.html"> <i class="fas fa-shopping-cart"></i></a>
+        </nav>
+      </div>
+      
+      <div class="user-section">
+        <div class="usuario-info">
+          <div class="user-text">
+            <div class="user-name" id="nombre-usuario">Cargando...</div>
+            <div class="estado-usuario" id="estado-usuario">...</div>
+          </div>
+          <div class="user-icons">
+            <div class="profile-dropdown">
+              <i class="fas fa-user" id="profile-icon"></i>
+              <div class="dropdown-content">
+                <a href="carrito.html"><i class="fas fa-shopping-cart"></i> Mi Carrito</a>
+                <a href="historial_user.html"><i class="fas fa-history"></i> Historial de Reservas</a>
+                <a href="#"><i class="fas fa-headset"></i> Comunicar con Admin</a>
+                <a href="#" id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="tabla-container">
+    <div class="tabla-header">
+      <h2 class="titulo" id="titulo-historial" >HISTORIA DEL USUARIO</h2>
+    </div>
+    <div class="barra-busqueda-container">
+        <div class="barra-busqueda">
+            <i class="fas fa-search icono-busqueda"></i>
+            <input type="text" id="input-busqueda" placeholder="Buscar por ID, nombre o correo...">
+        </div>
+    </div>
+
+    <table class="tabla-articulos">
+      <thead>
+        <tr>
+          <th>ID de Articulo</th>
+          <th>Nombre de Articulo</th>
+          <th>Categoria</th>
+          <th>Fecha reserva</th>
+          <th>Fecha devuelta</th>
+          <th>Reportar</th>
+          <th>Bloquear</th>
+          <th>Confirmar</th>
+        </tr>
+      </thead>
+       <tbody id="tabla-body"></tbody>
+    </table>
+  </div>
+
+  <script src="script/topbar.js"></script>
+  <script src="script/admin_histo_user.js"></script>
+</body>
+</html>

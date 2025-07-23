@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - UNSA Deportes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+        margin: 0;
+        font-family: 'Rajdhani', sans-serif;
+        background-color: #0D1C31;
+        color: #c5c6c7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .register-container {
+        width: 100%;
+        max-width: 1000px;
+        padding: 20px;
+    }
+
+    .register-card {
+        display: flex;
+        background-color: #000D1B;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        height: 550px; 
+    }
+
+    .register-image {
+        flex: 1;
+        min-width: 45%;
+        background-color: #000D1B;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .image-container {
+        width: 90%;
+        height: 90%;
+        background-image: url('/template/image/fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .register-form {
+        flex: 1;
+        min-width: 45%;
+        background-color: #000D1B;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form-content {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .register-form h2 {
+        color: #0A8D98;
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+        width: 100%;
+    }
+
+    .register-form label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #c5c6c7;
+    }
+
+    .register-form input {
+        width: 100%;
+        padding: 10px 12px;
+        border: none;
+        border-radius: 6px;
+        background-color: #051427;
+        color: #c5c6c7;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .register-form input::placeholder {
+        color: #7f8c8d;
+        opacity: 0.8;
+    }
+
+    .register-btn {
+        width: auto;
+        padding: 8px 30px;
+        background-color: #0A8D98;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 15px auto 0 auto; 
+        display: block; 
+        transition: all 0.3s;
+        font-size: 15px;
+    }
+
+    .register-btn:hover {
+        background-color: #0bb8c5;
+        transform: translateY(-2px);
+    }
+
+    .login-link {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .login-link a {
+        color: #66fcf1;
+        text-decoration: none;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .register-card {
+            flex-direction: column;
+            height: auto;
+        }
+        
+        .register-image {
+            height: 200px;
+            min-width: 100%;
+        }
+        
+        .register-form {
+            padding: 30px 20px;
+            min-width: 100%;
+        }
+        
+        .form-content {
+            max-width: 100%;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <div class="register-card">
+      <div class="register-image">
+        <div class="image-container"></div>
+      </div>
+      <div class="register-form">
+        <div class="form-content">
+            <h2>Crear Cuenta</h2>
+            <form action="registro.php" method="POST">
+              <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Correo Institucional</label>
+                <input type="email" id="email" name="email" placeholder="usuario@unsa.edu.pe" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="confirm-password">Confirmar Contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Repita su contraseña" required>
+              </div>
+              
+              <button type="submit" class="register-btn">Registrarse</button>
+            </form>
+            <p class="login-link">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
