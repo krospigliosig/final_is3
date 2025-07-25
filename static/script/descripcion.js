@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  fetch('data/articulos_admin.json')
+  fetch('/articulo/api/articulos/${idArticulo}/')
     .then(res => res.json())
     .then(data => {
       const articulo = data.find(item => item.id === idArticulo);

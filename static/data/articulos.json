@@ -7,7 +7,7 @@
     "estado": "Buen estado",
     "lugar": "Cancha mecánica",
     "tiempo_maximo": "4 días",
-    "imagen": "/template/image/futbol.jpg",
+    "imagen": "/static/image/futbol.jpg",
     "fecha_subida": "2023-05-15"
   },
   {
@@ -18,7 +18,7 @@
     "estado": "Desgastada",
     "lugar": "Gimnasio principal",
     "tiempo_maximo": "3 días",
-    "imagen": "/template/image/basquet.jpg",
+    "imagen": "/static/image/basquet.jpg",
     "fecha_subida": "2023-06-22"
   },
   {
@@ -29,7 +29,7 @@
     "estado": "Excelente estado",
     "lugar": "Cancha de arena",
     "tiempo_maximo": "5 días",
-    "imagen": "/template/image/voley.jpg",
+    "imagen": "/static/image/voley.jpg",
     "fecha_subida": "2023-04-10"
   },
   {
@@ -40,7 +40,7 @@
     "estado": "Buen estado",
     "lugar": "Sala de pesas",
     "tiempo_maximo": "7 días",
-    "imagen": "/template/image/pesas_4k.jpg",
+    "imagen": "/static/image/pesas_4k.jpg",
     "fecha_subida": "2023-07-30"
   },
   {
@@ -51,7 +51,7 @@
     "estado": "Nuevo",
     "lugar": "Piscina olímpica",
     "tiempo_maximo": "2 días",
-    "imagen": "/template/image/boya.jpg",
+    "imagen": "/static/image/boya.jpg",
     "fecha_subida": "2023-03-18"
   },
   {
@@ -62,7 +62,7 @@
     "estado": "Regular",
     "lugar": "Estacionamiento de equipos",
     "tiempo_maximo": "3 días",
-    "imagen": "/template/image/bicicleta.jpg",
+    "imagen": "/static/image/bicicleta.jpg",
     "fecha_subida": "2023-08-05"
   },
   {
@@ -73,7 +73,7 @@
     "estado": "Buen estado",
     "lugar": "Área de cardio",
     "tiempo_maximo": "1 día",
-    "imagen": "/template/image/soga.jpg",
+    "imagen": "/static/image/soga.jpg",
     "fecha_subida": "2023-01-12"
   },
   {
@@ -84,7 +84,7 @@
     "estado": "Excelente estado",
     "lugar": "Cancha de tenis 3",
     "tiempo_maximo": "4 días",
-    "imagen": "/template/image/futbol.jpg",
+    "imagen": "/static/image/futbol.jpg",
     "fecha_subida": "2023-09-27"
   },
   {
@@ -95,7 +95,7 @@
     "estado": "Regular",
     "lugar": "Cancha cubierta",
     "tiempo_maximo": "7 días",
-    "imagen": "/template/image/malla_voley.jpg",
+    "imagen": "/static/image/malla_voley.jpg",
     "fecha_subida": "2023-02-14"
   },
   {
@@ -106,7 +106,7 @@
     "estado": "Nuevo",
     "lugar": "Sala de ping pong",
     "tiempo_maximo": "2 días",
-    "imagen": "/template/image/futbol.jpg",
+    "imagen": "/static/image/futbol.jpg",
     "fecha_subida": "2023-10-08"
   },
   {
@@ -117,7 +117,7 @@
     "estado": "Desgastado",
     "lugar": "Almacén de objetos especiales",
     "tiempo_maximo": "1 día",
-    "imagen": "/template/image/wilson.jpg",
+    "imagen": "/static/image/wilson.jpg",
     "fecha_subida": "2023-11-01"
   }
 ]

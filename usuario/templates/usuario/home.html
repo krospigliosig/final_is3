@@ -5,39 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>InventarIO - Artículos Deportivos</title>
+
+  <!-- Estilos CSS -->
   <link rel="stylesheet" href="{% static 'css/topbar.css' %}">
   <link rel="stylesheet" href="{% static 'css/home.css' %}">
   <link rel="stylesheet" href="{% static 'css/bloqueo.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-  <script src="{% static 'data/articulos.json' %}"></script>
 </head>
 <body>
+
+  <!-- Encabezado -->
   <div class="header-container">
     <header>
       <div class="nav-section">
         <div class="logo">inventarIO</div>
         <nav class="nav-categorias">
-          <a href="home.html?categoria=Fútbol" class="filtro-categoria" data-categoria="Todos">Todos</a>
-          <a href="#" class="filtro-categoria" data-categoria="Fútbol">Fútbol</a>
-          <a href="#" class="filtro-categoria" data-categoria="Vóley">Vóley</a>
-          <a href="#" class="filtro-categoria" data-categoria="Básquet">Básquet</a>
-          <a href="#" class="filtro-categoria" data-categoria="Natación">Natación</a>
-          
-         
+          <a href="{% url 'usuario:home' %}" class="filtro-categoria">Todos</a>
+          <a href="{% url 'usuario:home' %}?categoria=Fútbol" class="filtro-categoria">Fútbol</a>
+          <a href="{% url 'usuario:home' %}?categoria=Vóley" class="filtro-categoria">Vóley</a>
+          <a href="{% url 'usuario:home' %}?categoria=Básquet" class="filtro-categoria">Básquet</a>
+          <a href="{% url 'usuario:home' %}?categoria=Natación" class="filtro-categoria">Natación</a>
+
           <div class="dropdown-categoria">
             <a href="#" id="dropdownToggle">Más artículos ▾</a>
             <div class="dropdown-menu">
-              <a href="#" class="filtro-categoria" data-categoria="Otros">Otros</a>
-              <a href="#" class="filtro-categoria" data-categoria="Ejercicio">Ejercicio</a>
-              <a href="#" class="filtro-categoria" data-categoria="Calistenia">Calistenia</a>
-              
+              <a href="{% url 'usuario:home' %}?categoria=Otros" class="filtro-categoria">Otros</a>
+              <a href="{% url 'usuario:home' %}?categoria=Ejercicio" class="filtro-categoria">Ejercicio</a>
+              <a href="{% url 'usuario:home' %}?categoria=Calistenia" class="filtro-categoria">Calistenia</a>
             </div>
           </div>
-              <a href="carrito.html"> <i class="fas fa-shopping-cart"></i></a>
+          <a href="carrito.html"><i class="fas fa-shopping-cart"></i></a>
         </nav>
       </div>
-      
+
       <div class="user-section">
         <div class="usuario-info">
           <div class="user-text">
@@ -52,7 +53,6 @@
                 <a href="historial_user.html"><i class="fas fa-history"></i> Historial de Reservas</a>
                 <a href="#"><i class="fas fa-headset"></i> Comunicar con Admin</a>
                 <a href="#" id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
-
               </div>
             </div>
           </div>
@@ -60,39 +60,76 @@
       </div>
     </header>
   </div>
-<div class="new-section">
-  <div class="new-container">
-    <div class="ribbon">Nuevos Artículos</div>
-    <div class="small-cards-container" id="nuevos-articulos">
-     
+
+  <!-- Nuevos Artículos -->
+  <div class="new-section">
+    <div class="new-container">
+      <div class="ribbon">Nuevos Artículos</div>
+      <div class="small-cards-container">
+        {% for articulo in articulos|slice:":4" %}
+          <div class="card">
+            <img src="{{ articulo.imagen.url }}" alt="{{ articulo.nombre }}">
+            <h3 class="nombre-articulo">{{ articulo.nombre }}</h3>
+            <ul class="info-articulo">
+              <li><i class="fas fa-tag"></i> {{ articulo.categoria.nombre }}</li>
+              <li><i class="fas fa-clock"></i> Máx: {{ articulo.plazo_max_dias }} días</li>
+              <li><i class="fas fa-map-marker-alt"></i> {{ articulo.ubicacion }}</li>
+            </ul>
+          </div>
+        {% empty %}
+          <p style="color:white;">No hay artículos registrados.</p>
+        {% endfor %}
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Todos los Artículos -->
   <div class="cards-container" id="cards-container">
-
+    {% for articulo in articulos %}
+      <div class="card">
+        <img src="{{ articulo.imagen.url }}" alt="{{ articulo.nombre }}">
+        <h3 class="nombre-articulo">{{ articulo.nombre }}</h3>
+        <ul class="info-articulo">
+          <li><i class="fas fa-tag"></i> {{ articulo.categoria.nombre }}
+            {% if articulo.disponible %}
+              <span class="disponible">Disponible</span>
+            {% else %}
+              <span class="no-disponible">No disponible</span>
+            {% endif %}
+          </li>
+          <li><i class="fas fa-info-circle"></i> {{ articulo.estado_fisico }}</li>
+          <li><i class="fas fa-map-marker-alt"></i> {{ articulo.ubicacion }}</li>
+          <li><i class="fas fa-clock"></i> {{ articulo.plazo_max_dias }} días</li>
+        </ul>
+      </div>
+    {% endfor %}
   </div>
+
+  <!-- Modal Bloqueado -->
   <div id="modal-bloqueado" class="modal-bloqueado">
-  <div class="modal-contenido">
-    <h2>🔒 Usuario bloqueado por incumplimiento de devolución</h2>
-    <p id="nombre-usuario-bloqueado"></p>
-    <p>Su cuenta ha sido temporalmente bloqueada debido a la no devolución del siguiente artículo en el plazo establecido:</p>
-    <ul>
-      <li>Artículo: <span id="nombre-articulo"></span></li>
-      <li>Fecha de reserva: <span id="fecha-reserva"></span></li>
-      <li>Fecha límite de devolución: <span id="fecha-limite"></span></li>
-      <li>Días de retraso: <span id="dias-retraso"></span> días</li>
-    </ul>
-    <h2>🛠 ¿Cómo desbloquear su cuenta?</h2>
-    <p>Para reactivar su cuenta deberá:</p>
-    <ol>
-      <li>Devolver el artículo personalmente en el módulo correspondiente.</li>
-      <li>Acercarse al responsable del módulo o enviar un correo al administrador.</li>
-    </ol>
-    <p>Gracias por su comprensión. El cumplimiento de los plazos permite que todos los estudiantes puedan acceder equitativamente al intario deportivo.</p>
+    <div class="modal-contenido">
+      <h2>🔒 Usuario bloqueado por incumplimiento de devolución</h2>
+      <p id="nombre-usuario-bloqueado"></p>
+      <p>Su cuenta ha sido temporalmente bloqueada debido a la no devolución del siguiente artículo en el plazo establecido:</p>
+      <ul>
+        <li>Artículo: <span id="nombre-articulo"></span></li>
+        <li>Fecha de reserva: <span id="fecha-reserva"></span></li>
+        <li>Fecha límite de devolución: <span id="fecha-limite"></span></li>
+        <li>Días de retraso: <span id="dias-retraso"></span> días</li>
+      </ul>
+      <h2>🛠 ¿Cómo desbloquear su cuenta?</h2>
+      <p>Para reactivar su cuenta deberá:</p>
+      <ol>
+        <li>Devolver el artículo personalmente en el módulo correspondiente.</li>
+        <li>Acercarse al responsable del módulo o enviar un correo al administrador.</li>
+      </ol>
+      <p>Gracias por su comprensión. El cumplimiento de los plazos permite que todos los estudiantes puedan acceder equitativamente al inventario deportivo.</p>
+    </div>
   </div>
-</div>
 
-  <script src="{% static 'script/topbar.js' %}"></script>
-  <script src="{% static 'script/cards.js' %}"></script>
+  <!-- Scripts -->
+  <!-- Eliminamos la carga desde JSON porque ya es dinámico -->
+  <!-- <script src="{% static 'script/cards.js' %}"></script> -->
+  
 </body>
 </html>

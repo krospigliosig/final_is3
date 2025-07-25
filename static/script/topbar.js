@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Usuario info
-fetch('data/usuario.json')
+fetch(USUARIO_JSON_URL)
   .then(response => response.json())
   .then(usuario => {
     const nombreUsuario = document.getElementById('nombre-usuario');
@@ -86,7 +86,7 @@ fetch('data/usuario.json')
       } else {
         estadoUsuario.textContent = '● Bloqueado';
         estadoUsuario.classList.add('estado-bloqueado');
-        fetch('data/prestamo_usuario.json') 
+        fetch(PRESTAMO_JSON_URL) 
           .then(res => res.json())
           .then(prestamo => {
             const fechaReserva = new Date(prestamo.fecha_reserva);

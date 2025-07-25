@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const categoria = params.get('categoria');
 
-  fetch('data/articulos.json')
+  fetch('static/data/articulos.json')
     .then(response => response.json())
     .then(data => {
       articulosGlobal = data;

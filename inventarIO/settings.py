@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     "articulo.apps.ArticuloConfig",
     "usuario.apps.UsuarioConfig",
     "administrador.apps.AdministradorConfig",
-    "accion.apps.AccionConfig",
 
     # Predeterminados de Django
     "django.contrib.admin",

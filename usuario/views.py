@@ -11,6 +11,7 @@ from .forms import RegistroUsuarioForm
 from .utils import generar_token_activacion, verificar_token_activacion
 from .mail import enviar_correo_activacion
 
+from articulo.models import Articulo
 # Create your views here.
 def index(request):
     return render(request, "usuario/login.html")
@@ -100,5 +101,5 @@ def logout_usuario(request):
 
 
 def home(request):
-    # Opcional: protege esta vista con @login_required si lo deseas
-    return render(request, 'usuario/home.html')
+    articulos = Articulo.objects.all()
+    return render(request, 'usuario/home.html', {'articulos': articulos})
