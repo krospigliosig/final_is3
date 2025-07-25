@@ -18,7 +18,10 @@
       
       <button class="login-button">Iniciar sesión</button>
       
-      <p class="register-text">¿No tienes una cuenta? <span class="register-link">Regístrate</span></p>
+      <p class="register-text">
+        ¿No tienes una cuenta?
+        <a href="{% url 'usuario:registro_usuario' %}" class="register-link">Regístrate</a>
+      </p>
     </div>
   </div>
 </div>

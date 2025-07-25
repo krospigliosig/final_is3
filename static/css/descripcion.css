@@ -1,0 +1,154 @@
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin-top: 2vh;
+  margin-left: 3vw;
+  box-sizing: border-box;
+}
+
+.left-section {
+  width: 30vw;
+  height: 75vh;
+  background-color: #000A17;
+  padding: 4vh 2vw;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vw;
+  border-radius: 1.5vw;
+}
+
+.left-section img {
+  width: 84%;
+  height: 87%;
+  object-fit: cover;
+  border-radius: 1vw;
+  object-position: center;
+}
+
+.right-section {
+  flex: 1;
+  padding: 5vh 3vw;
+  color: white;
+  margin-left: 3vw;
+  box-sizing: border-box;
+}
+
+.item-title {
+  font-size: 3vw;
+  color: #66fcf1;
+  margin-bottom: 3vh;
+}
+
+.item-details {
+  font-size: 1.2vw;
+  line-height: 1.6;
+  margin-bottom: 4vh;
+}
+
+.item-details p {
+  margin: 1vh 0;
+}
+
+.button-group {
+  display: flex;
+  gap: 2vw;
+  margin-top: 5vh;
+}
+
+.btn {
+  padding: 1.5vh 2vw;
+  font-size: 1.1vw;
+  border-radius: 0.8vw;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-reservar {
+  background-color: #688BFF;
+  color: #ffffff;
+  border: none;
+  margin-left: 3vw;
+}
+
+.btn-carrito {
+  background-color: #C061FF;
+  color: #ffffff;
+  border: none;
+  margin-left: 1vw;
+}
+
+.btn:hover {
+  transform: translateY(-0.3vh);
+  box-shadow: 0 0.5vh 1.5vh rgba(0,0,0,0.3);
+}
+
+/* Botón de lista de espera */
+.btn-lista-espera {
+  background-color: #688BFF;
+  color: white;
+  padding: 1.5vh 2vw;
+  border: none;
+  font-weight: bold;
+  border-radius: 1vw;
+  cursor: pointer;
+  margin: 1vh auto;
+  display: block;
+  width: 20vw;
+  font-size: 1.2vw;
+}
+
+.btn-lista-espera:hover {
+  background-color: #3551af;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #0D1C31;
+  margin: 15vh auto;
+  padding: 3vh 2vw;
+  border-radius: 1vw;
+  width: 25vw;
+  max-width: 40vw;
+  text-align: center;
+  font-family: 'Rajdhani', sans-serif;
+  color: #FFFFFF;
+  font-size: 1vw;
+}
+
+.numero-grande {
+  font-size: 3vw;
+  font-weight: bold;
+  color: #66FCF1;
+  margin: 1.5vh 0;
+}
+
+.btn-confirmar {
+  margin-top: 2vh;
+  background-color: #C061FF;
+  color: white;
+  border: none;
+  padding: 1.2vh 2vw;
+  border-radius: 0.8vw;
+  font-size: 1.1vw;
+  cursor: pointer;
+}
+
+.btn-confirmar:hover {
+  background-color: #A749E3;
+}

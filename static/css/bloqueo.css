@@ -1,0 +1,33 @@
+.modal-bloqueado {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: #0D1C31;
+  padding: 30px 60px;
+  border-radius: 12px;
+  color: #fff;
+  width: 90%;
+  max-width: 780px;
+  font-family: 'Rajdhani', sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box; 
+}
+
+
+.modal-contenido h2 {
+  color: #ffffff;
+}
+
+.modal-contenido ul, .modal-contenido ol {
+  margin-left: 20px;
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "001",
+    "nombre": "Pelota de futbol",
+    "categoria": "futbol"
+  },
+  {
+    "id": "002",
+    "nombre": "Pelota de basquet",
+    "categoria": "basquet"
+  },
+  {
+    "id": "003",
+    "nombre": "Pelota de voley",
+    "categoria": "voley"
+  },
+  {
+    "id": "004",
+    "nombre": "Pesas 4k",
+    "categoria": "otros"
+  },
+  {
+    "id": "005",
+    "nombre": "boya",
+    "categoria": "natacion"
+  },
+  {
+    "id": "006",
+    "nombre": "bicicleta",
+    "categoria": "ciclismo"
+  },
+  {
+    "id": "007",
+    "nombre": "soga",
+    "categoria": "otros"
+  },
+  {
+    "id": "008",
+    "nombre": "Kit de tenis",
+    "categoria": "tenis"
+  },
+  {
+    "id": "009",
+    "nombre": "malla de voley",
+    "categoria": "voley"
+  },
+  {
+    "id": "010",
+    "nombre": "caja de pelotas",
+    "categoria": "ping pong"
+  }
+]
