@@ -24,7 +24,8 @@
     "ubicacion": "Gimnasio principal",
     "horario": "8am - 8pm",
     "descripcion": "Pelota de basketball profesional, algo gastada pero en condiciones de uso",
-    "imagen": "/template/image/basquet.jpg"
+    "imagen": "/template/image/basquet.jpg",
+    "fecha_subida": "2023-06-22"
   },
   {
     "id": "003",
@@ -37,7 +38,8 @@
     "ubicacion": "Cancha de arena",
     "horario": "9am - 7pm",
     "descripcion": "Pelota de vóley profesional, casi nueva, marca Mikasa",
-    "imagen": "/template/image/voley.jpg"
+    "imagen": "/template/image/voley.jpg",
+    "fecha_subida": "2023-04-10"
   },
   {
     "id": "004",
@@ -50,7 +52,8 @@
     "ubicacion": "Sala de pesas",
     "horario": "6am - 10pm",
     "descripcion": "Juego de pesas de 4kg, ideal para entrenamiento básico",
-    "imagen": "/template/image/pesas_4k.jpg"
+    "imagen": "/template/image/pesas_4k.jpg",
+    "fecha_subida": "2023-07-30"
   },
   {
     "id": "005",
@@ -63,7 +66,8 @@
     "ubicacion": "Piscina olímpica",
     "horario": "7am - 9pm",
     "descripcion": "Boya de entrenamiento para natación, color rojo fluorescente",
-    "imagen": "/template/image/boya.jpg"
+    "imagen": "/template/image/boya.jpg",
+    "fecha_subida": "2023-03-18"
   },
   {
     "id": "006",
@@ -76,7 +80,8 @@
     "ubicacion": "Estacionamiento de equipos",
     "horario": "8am - 8pm",
     "descripcion": "Bicicleta de montaña, necesita ajuste de frenos pero funcional",
-    "imagen": "/template/image/bicicleta.jpg"
+    "imagen": "/template/image/bicicleta.jpg",
+    "fecha_subida": "2023-08-05"
   },
   {
     "id": "007",
@@ -89,7 +94,8 @@
     "ubicacion": "Área de cardio",
     "horario": "6am - 10pm",
     "descripcion": "Soga para saltar profesional, con contador de vueltas integrado",
-    "imagen": "/template/image/soga.jpg"
+    "imagen": "/template/image/soga.jpg",
+    "fecha_subida": "2023-01-12"
   },
   {
     "id": "008",
@@ -102,7 +108,8 @@
     "ubicacion": "Cancha de tenis 3",
     "horario": "8am - 8pm",
     "descripcion": "Kit completo que incluye 3 raquetas y 6 pelotas de tenis",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/futbol.jpg",
+    "fecha_subida": "2023-09-27"
   },
   {
     "id": "009",
@@ -115,7 +122,8 @@
     "ubicacion": "Cancha cubierta",
     "horario": "9am - 9pm",
     "descripcion": "Red de vóley profesional, con algunos hilos rotos pero funcional",
-    "imagen": "/template/image/malla_voley.jpg"
+    "imagen": "/template/image/malla_voley.jpg",
+    "fecha_subida": "2023-02-14"
   },
   {
     "id": "010",
@@ -128,7 +136,8 @@
     "ubicacion": "Sala de ping pong",
     "horario": "10am - 10pm",
     "descripcion": "Caja con 12 pelotas de ping pong profesionales de 3 estrellas",
-    "imagen": "/template/image/futbol.jpg"
+    "imagen": "/template/image/futbol.jpg",
+    "fecha_subida": "2023-10-08"
   },
   {
     "id": "011",
@@ -141,6 +150,7 @@
     "ubicacion": "Almacén de objetos especiales",
     "horario": "10am - 10pm",
     "descripcion_adicional": "Réplica de la famosa pelota Wilson de la película 'Náufrago', con marca de sangre en la cara como en el film. Incluye certificado de autenticidad.",
-    "imagen": "/template/image/wilson.jpg"
+    "imagen": "/template/image/wilson.jpg",
+    "fecha_subida": "2023-11-01"
   }
 ]

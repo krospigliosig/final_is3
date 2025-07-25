@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Inventario | Artículos</title>
+
+  <!-- Google Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="css/articulo.css">
+</head>
+<body>
+
+  <!-- ────── TOPBAR ────── -->
+  <div class="header-container">
+    <header>
+      <div class="nav-section">
+        <div class="logo">inventarIO</div>
+        <nav class="nav-categorias">
+          <a href="home.html">Usuarios</a>
+          <a href="home.html">Articulos</a>
+          <a href="home.html">Todos</a>
+          <a href="home.html">Fútbol</a>
+          <a href="home.html">Vóley</a>
+          <a href="home.html">Más artículos</a>
+        </nav>
+      </div>
+      
+      <div class="user-section">
+        <div class="usuario-info">
+          <div class="user-text">
+            <div class="user-name">Diego Aquino</div>
+            <div class="activo">● Activo</div>
+          </div>
+          <div class="user-icons">
+            <div class="profile-dropdown">
+              <i class="fas fa-user" id="profile-icon"></i>
+              <div class="dropdown-content">
+                <a href="carrito.html"><i class="fas fa-shopping-cart"></i> Mi Carrito</a>
+                <a href="historial.html"><i class="fas fa-history"></i> Historial de Reservas</a>
+                <a href="#"><i class="fas fa-headset"></i> Comunicar con Admin</a>
+                <a href="#"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+              </div>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- ────── CUERPO ────── -->
+  <main class="wrapper">
+
+    <!-- barra de búsqueda + botón -->
+    <div class="controls">
+      <label class="search-box">
+        <input type="search" id="search" placeholder="Buscar articulo">
+        <svg class="icon-search" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 21 15.8 15.8m2.2-6.8A8 8 0 1 1 1
+                   9.03 8 8 0 0 1 18 9.03Z"
+                stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" fill="none"/>
+        </svg>
+      </label>
+
+      <button class="btn-primary" id="addBtn">Añadir artículo</button>
+    </div>
+
+    <!-- tabla -->
+    <section class="table">
+      <ul class="table-row table-head">
+        <li>Id de articulo</li>
+        <li>Nombre de articulo</li>
+        <li>Categoria</li>
+        <li>Disponibilidad</li>
+        <li>Editar</li>
+        <li>Eliminar</li>
+      </ul>
+
+      <!-- cuerpo generado con JS -->
+      <ul id="table-body"></ul>
+    </section>
+  </main>
+
+  <!-- script -->
+  <script src="script/articulo.js"></script>
+</body>
+</html>

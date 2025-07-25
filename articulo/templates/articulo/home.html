@@ -66,9 +66,38 @@
     </div>
   </div>
 </div>
-  <div class="cards-container" id="cards-container">
+  <div class="cards-container">
+  {% for art in articulos %}
+    <a class="card" href="{% url 'articulo:detalles' art.id %}">
+      <img src="{{ art.imagen }}" alt="{{ art.nombre_art }}">
+      <h3>{{ art.nombre_art }}</h3>
+      <div class="card-content">
+        <div class="info-line">
+          <span class="info-icon">🏷️</span>
+          <span>Categoría: {{ art.categoria }}</span>
+          <span class="disponibilidad {% if art.disponible %}disponible{% else %}no-disponible{% endif %}">
+            {{ art.disponible|yesno:"Disponible,No disponible" }}
+          </span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">🔄</span>
+          <span>Estado: {{ art.estado_art }}</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">📍</span>
+          <span>Lugar: {{ art.ubicacion }}</span>
+        </div>
+        <div class="info-line">
+          <span class="info-icon">⏱</span>
+          <span>Tiempo máximo: {{ art.dias_prestamo }} días</span>
+        </div>
+      </div>
+    </a>
+  {% empty %}
+    <p>No hay artículos disponibles en esta categoría.</p>
+  {% endfor %}
+</div>
 
-  </div>
   <div id="modal-bloqueado" class="modal-bloqueado">
   <div class="modal-contenido">
     <h2>🔒 Usuario bloqueado por incumplimiento de devolución</h2>
